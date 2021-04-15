@@ -1050,7 +1050,7 @@ a {
 .bg-home {
   position: relative;
   background-color: #ffffff;
-  padding: 130px 0px 70px 0px;
+  padding: 70px 0px 200px 0px !important;
 }
 
 .home-badge p {

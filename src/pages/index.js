@@ -1,6 +1,7 @@
 import React from "react"
 // import { Row, Col, Container, ListGroup } from "react-bootstrap"
 import HeroOne from "../components/Sections/heroOne"
+import HeroTwo from "../components/Sections/HeroTwo"
 import OurServices from "../components/Home/OurServices"
 import WhatWillDo from "../components/Home/WhatWillDo"
 
@@ -10,6 +11,7 @@ const IndexPage = () => (
     <Layout pageInfo={{ pageName: "index" }}>
         <SEO title="Home" keywords={[`gatsby`, `react`, `bootstrap`]} />
         <HeroOne/>
+        <HeroTwo />
     </Layout>
 )
 

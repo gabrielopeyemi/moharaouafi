@@ -29,6 +29,7 @@ const Div = styled.div`
     height: 400px;
     margin-bottom: 50px;
     justify-content: center;
+    cursor: pointer;
     border: 0;
     &:hover{
         border: 2px solid #f3f3f3;

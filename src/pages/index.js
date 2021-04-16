@@ -8,6 +8,7 @@ import WhatWillDo from "../components/Home/WhatWillDo"
 import Herofour from "../components/Sections/HeroFour"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import HeroFive from "../components/Sections/HeroFive"
 
 
 
@@ -18,6 +19,7 @@ const IndexPage = () => (
         <HeroTwo />
         <HeroThree />
         <Herofour />
+        <HeroFive />
     </Layout>
 )
 

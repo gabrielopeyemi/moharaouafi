@@ -5,7 +5,7 @@ export default function ServiceCard(props) {
     console.log({props: props.data})
     const {name, desc, image} = props.data;
   return (
-    <div className='col-md-4'>
+    <div className='col-md-6 col-lg-4 col-sm-12'>
         <Div className="card">
             <Img src={image} className="img-thumbnail" alt={image}/>
             <div className="card-body">
@@ -30,6 +30,7 @@ const Div = styled.div`
     justify-content: center;
     cursor: pointer;
     border: 0;
+    margin: auto;
     &:hover{
         border: 2px solid #f3f3f3;
         --tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);

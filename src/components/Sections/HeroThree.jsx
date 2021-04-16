@@ -22,7 +22,6 @@ export default function HeroThree() {
       name: 'IDENTITÉ VISUELLE',
       desc: 'Nous élaborons ensemble votre nouvelle image ou une refonte de votre marque qui serait originale et attirante : Logotype, charte graphique…',
       image: one,
-      
     },
     {
       id: 2,

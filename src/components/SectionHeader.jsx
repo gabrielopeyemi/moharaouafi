@@ -14,7 +14,7 @@ export default function SectionHeader(props) {
 }
 
 const Header = styled.h1`    
-  font-size: 6.5vw;
+  font-size: 4.5vw;
   line-height: 1;
   text-transform: uppercase;
   font-weight: 900;

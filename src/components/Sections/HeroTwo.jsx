@@ -41,5 +41,5 @@ const P = styled.p`
 const Div = styled.div`
     max-width: 1280px;
     width: 100%;   
-    margin: 1.5rem 1.5rem 1.5rem 1.5rem;
+    margin: 1.5rem 1.5rem 150px 1.5rem;
 `;

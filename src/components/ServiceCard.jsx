@@ -27,7 +27,6 @@ const Div = styled.div`
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     height: 400px;
-    margin-bottom: 50px;
     justify-content: center;
     cursor: pointer;
     border: 0;
@@ -36,9 +35,6 @@ const Div = styled.div`
         --tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
         box-shadow: var(#f3f3f3, 0 0 #0000), var(#f3f3f3, 0 0 #0000), var(#f3f3f3);    
     };
-    &:focus {
-        color: palevioletred;
-    }
 `;
 
 const Img = styled.img`

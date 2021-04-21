@@ -21,7 +21,7 @@ export default function ServiceCard(props) {
 const Div = styled.div`
     transition-duration: 300ms;
     transition-property: box-shadow;
-    width: 18rem;
+    width: 22rem;
     padding-top: 2rem;
     padding-bottom: 2rem;
     padding-left: 1.5rem;

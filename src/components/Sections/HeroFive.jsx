@@ -40,7 +40,8 @@ import envibusTwo from "./../../assets/Image/LogoClients/envibus/envibusTwo.png"
 export default function HeroFive() {
     const header = {
         one:  `Ils me font confiance`
-    }
+    };
+    
     const [imageOne, setImageOne] = useState(CashArcadeOne)
     const [imageDEBS, setImageDEBS] = useState(DEBSOne)
     const [imagefruiteo, setImagfruiteo] = useState(fruiteoOne)
@@ -54,8 +55,8 @@ export default function HeroFive() {
         <SectionHeader header={ header }/>
         <Div>
           <Carousel 
-            itemsToShow={4}
-            outerSpacing={100}
+            itemsToShow={3}
+            outerSpacing={60}
             itemPadding={[10, 50]}
           >
             <img maxWidth="50%" className="img-fluid" onMouseOver={()=> setImageOne(CashArcadeTwo)} onMouseLeave={()=> setImageOne(CashArcadeOne)} src={imageOne} alt={imageOne}/>

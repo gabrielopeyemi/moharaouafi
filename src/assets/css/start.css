@@ -1,0 +1,28 @@
+.text-primary {
+    color: #6dbd8f !important;
+}
+.bg-primary {
+    background-color: #6dbd8f !important;
+}
+
+element {
+}
+.bg-dating {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.lg\:pb-0 {
+    padding-bottom: 0px;
+}
+.lg\:mt-0 {
+    margin-top: 0px;
+}
+.lg\:bg-discover-laptop {
+    background-image: url('./../Image/DiscoveryCall/web.jpg');
+}
+
+@media only screen and (max-width: 600px) {
+    .bg-discover-smartphone {
+        background-image: url('./../Image/DiscoveryCall/mobile.jpg');
+    }
+  }

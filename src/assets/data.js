@@ -1,4 +1,4 @@
-export const sitename = `SoftMesh`;
+export const sitename = `moharaouafi`;
 export const colors = {
     footerBG: '#20232a'
 }

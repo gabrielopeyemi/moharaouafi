@@ -49,35 +49,30 @@ const INavbar = (props) => {
                 <div className="bm-menu" style={{left: 'auto', right: '0px', width: `${navbarOpen ? '300px': '0px'}`}}>
                   <nav className="bm-item-list">
                     <ul className="flex flex-col">
-                      <li className="uppercase my-4 -ml-4 text-white font-medium text-lg">
+                      <li onClick={()=> setNavbarOpen(false)} className="uppercase my-4 -ml-4 text-white font-medium text-lg">
                         <a href="#">Service</a>
                       </li> 
-                      <li className="uppercase my-4 -ml-4 text-white font-medium text-lg">
+                      <li onClick={()=> setNavbarOpen(false)} className="uppercase my-4 -ml-4 text-white font-medium text-lg">
                         <a href="#">Portfolio</a>
                       </li> 
-                      <li className="uppercase my-4 -ml-4 text-white font-medium text-lg">
+                      <li onClick={()=> setNavbarOpen(false)} className="uppercase my-4 -ml-4 text-white font-medium text-lg">
                         <a href="javascript:void">Blog</a>
                       </li> 
-                      <li className="uppercase my-4 -ml-4 text-white font-medium text-lg">
+                      <li onClick={()=> setNavbarOpen(false)} className="uppercase my-4 -ml-4 text-white font-medium text-lg">
                         <a href="#">Contact</a>
                       </li> 
-                      <li className="uppercase my-4 -ml-4 text-white font-medium text-lg">
+                      <li onClick={()=> setNavbarOpen(false)} className="uppercase my-4 -ml-4 text-white font-medium text-lg">
                         <a href="/faq" className="">F.A.Q</a>
                       </li>
                     </ul>
                   </nav>
-                  <span>
-                    
+                  <span className="bm-cross-button cross-style">
+                    <FaTimes onClick={()=> setNavbarOpen(false)} style={{color: 'white'}}/>
                   </span>
                 </div>
-                  {
-                    navbarOpen ?  
-                    <FaTimes onClick={()=> setNavbarOpen(false)} style={{color: 'white', zIndex: 99999, left: 'auto', right: '36px', position: 'sticky' }} /> 
-                    :
-                    <FaBars onClick={() => setNavbarOpen(true)} style={{color: 'white', left: 'auto', right: '36px'}}/>
-                  }
-                 
-                  
+                <div style={{right: '250px', width: '30px', height: '30px'}}>
+                  <FaBars onClick={() => setNavbarOpen(true)}  style={{color: 'white', left: 'auto', right: '36px'}}/>
+                </div>
               </div>
             </div>
           </div>

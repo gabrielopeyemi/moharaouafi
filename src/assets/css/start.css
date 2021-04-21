@@ -54,3 +54,14 @@ element {
     text-decoration: none;
     margin-left: 20px;
 }
+.bm-cross-button {
+    transform: scale(1.8);
+    height: 34px;
+    width: 34px;
+}
+.cross-style {
+    position: absolute;
+    top: 40px;
+    right: 20px !important;
+    cursor: pointer;
+}

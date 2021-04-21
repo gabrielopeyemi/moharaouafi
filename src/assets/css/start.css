@@ -26,3 +26,31 @@ element {
         background-image: url('./../Image/DiscoveryCall/mobile.jpg');
     }
   }
+
+  /* Nav */
+  .bm-menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background-color: #0F2829;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.3s;
+}
+.bm-burger-button {
+    cursor: pointer;
+    height: 20px;
+    width: 26px;
+    position: absolute;
+    top: 15px !important;
+    right: 0 !important;
+}
+.bm-item-list > * {
+    display: flex;
+    padding: .7em;
+    text-decoration: none;
+    margin-left: 20px;
+}

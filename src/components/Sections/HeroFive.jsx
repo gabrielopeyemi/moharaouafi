@@ -49,15 +49,29 @@ export default function HeroFive() {
     const [imageVictoriaInfinity, setImageVictoriaInfinity] = useState(VictoriaInfinityOne)
     const [imageLaxess, setImageLaxess] = useState(LaxessOne)
     const [imagecfdt, setImagecfdt] = useState(cfdtOne)
-    const [imageenvibus, setImageenvibus] = useState(envibusOne)
+    const [imageenvibus, setImageenvibus] = useState(envibusOne) 
+    const breakPoints = [
+      {
+          width: 1, itemsToShow: 1
+      },
+      {
+          width: 550, itemsToShow: 2
+      },
+      {
+          width: 768, itemsToShow: 3
+      },
+      {
+          width: 1200, itemsToShow: 4
+      }
+  ]
   return (
     <>
         <SectionHeader header={ header }/>
         <Div>
           <Carousel 
-            itemsToShow={3}
             outerSpacing={60}
             itemPadding={[10, 50]}
+            breakPoints={breakPoints}
           >
             <img maxWidth="50%" className="img-fluid" onMouseOver={()=> setImageOne(CashArcadeTwo)} onMouseLeave={()=> setImageOne(CashArcadeOne)} src={imageOne} alt={imageOne}/>
             <img maxWidth="50%" className="img-fluid" onMouseOver={()=> setImageDEBS(DEBSTwo)} onMouseLeave={()=> setImageDEBS(DEBSOne)} src={imageDEBS} alt={imageDEBS}/>

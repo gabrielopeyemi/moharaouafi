@@ -36,7 +36,6 @@ const Layout = ({ children, pageInfo }) => (
     render={data => (
       <>
         <Container fluid className="px-0 main">
-          <INavbar pageInfo={pageInfo} />
           <main>{children}</main>
         </Container>
         <Footer/>

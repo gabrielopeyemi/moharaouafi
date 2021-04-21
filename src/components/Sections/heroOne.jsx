@@ -1,9 +1,11 @@
 import React from 'react'
 import img from "./../../assets/Image/mac.png";
+import INavbar from '../Navigation'
 
 export default function HeroOne() {
     return (
-        <>
+        <header clasName='w-full' style={{backgroundImage: 'linear-gradient(rgb(95, 175, 140), rgb(116, 196, 145))'}}>
+        <INavbar />
         <section className="bg-home bg-home-4" id="home">
             <div className="bg-overlay"></div>
                 <div class="wave wave1"></div>
@@ -29,6 +31,6 @@ export default function HeroOne() {
                 </div>
             </section>
 
-        </>
+        </header>
     )
 }

@@ -35,11 +35,29 @@ export default function HeroEight() {
             project: 'Victoria Infinity',
             content: `“De la création d'un site internet à celle d'un dépliant, Moha Raouafi sait mettre à notre service ses multiples compétences dans le travail : fiable, à l'écoute et d'excellent conseil, ses propositions sont d'une grande efficacité.”`,            img: Three,
         }
+
+    ]
+
+    // https://moharaouafi.fr/wp-json/wp/v2/posts
+
+    const breakPoints = [
+        {
+            width: 1, itemsToShow: 1
+        },
+        {
+            width: 550, itemsToShow: 2
+        },
+        {
+            width: 768, itemsToShow: 3
+        },
+        {
+            width: 1200, itemsToShow: 4
+        }
     ]
   return (
     <Div>
         <SectionHeader header = { Header } />
-        <Carousel>
+        <Carousel >
             {Datas.map((data, i)=>{
                 const {content, name, img, project, id} = data;
                 return(

@@ -11,75 +11,76 @@ import LogoImage from './Logo'
 
 const INavbar = (props) => {
   
-  
-  const [click, setClick] = useState(false);
-  const [button, setbutton] = useState(true);
-  const [navbar, setNavbar] = useState(false)
+    const [navbarOpen , setNavbarOpen ] = useState(false)
  
-
-  const handleClick = () => {
-    setClick(!click)
-    console.log('click')
-  };
-  const closeMobileMenu = (e) => setClick(false);
-  const closeMobileLogout = e => {
-    console.log('kk');
-    setClick(false);
-    window.localStorage.removeItem('token');
-    window.location = '/login';
-  }
-  useEffect(() => {
-    const showButton = () => {
-      if (window.innerWidth <= 960) {
-        setbutton(false);
-      } else {
-        setbutton(true);
-      }
-    }
-    const changeBackground = () => {
-      console.log(window.scrollY);
-      if (window.screenX >= 80) {
-        setNavbar(true)
-      } else {
-        setNavbar(false)
-      }
-    }
-  window.addEventListener('resize', showButton)
-  window.addEventListener('scroll', changeBackground)
-  }, [])
-  
-
-
 
   
 
   return (
     <>
-      <nav className={navbar ? 'navbar active' : 'navbar'}>
-        <div className="navbar-container">
-          <Link to='/' className='navbar-logo'>
-           <LogoImage />
-            {/* <i className="fab fa-typo3"></i> */}
-          </Link>
-          <div className="menu-icon" onClick={handleClick} style={{color: 'white'}}>
-            {click ? <FaTimes/> : <FaBars/> }
-          </div>
-          <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-            
-            <div className="menu-icon" onClick={handleClick} style={{color: 'white'}}>
-              {click ? <FaTimes/> : <FaBars/> }
+      <nav className="flex justify-center">
+        <div className="relative flex items-center justify-between container my-6 mx-6">
+          <a href="/" aria-current="page" className="router-link-exact-active router-link-active">
+            {/* <img src="/images/logo.png?56846975d83dfd72b117c36f98fed657" alt="Logo" className="w-24 h-12"/> */}
+            <LogoImage />
+          </a> 
+          <ul className="hidden lg:flex">
+            <li className="uppercase mx-5 text-white font-medium text-lg">
+              <a href="#">Service</a>
+            </li> 
+            <li className="uppercase mx-5 text-white font-medium text-lg">
+              <a href="#">Portfolio</a>
+            </li> 
+            <li className="uppercase mx-5 text-white font-medium text-lg">
+              <a href="javascript:void">Blog</a>
+            </li>
+            <li className="uppercase mx-5 text-white font-medium text-lg">
+              <a href="#">Contact</a>
+            </li> 
+            <li className="uppercase mx-5 text-white font-medium text-lg">
+              <a href="/faq" className="">F.A.Q</a>
+            </li>
+          </ul> 
+          <div className="lg:flex hidden">
+          </div> 
+          <div className="lg:hidden">
+            <div right="" nooverlay="" closeonnavigation="true">
+              <div>
+                <div className="bm-menu" style={{left: 'auto', right: '0px', width: `${navbarOpen ? '300px': '0px'}`}}>
+                  <nav className="bm-item-list">
+                    <ul className="flex flex-col">
+                      <li className="uppercase my-4 -ml-4 text-white font-medium text-lg">
+                        <a href="#">Service</a>
+                      </li> 
+                      <li className="uppercase my-4 -ml-4 text-white font-medium text-lg">
+                        <a href="#">Portfolio</a>
+                      </li> 
+                      <li className="uppercase my-4 -ml-4 text-white font-medium text-lg">
+                        <a href="javascript:void">Blog</a>
+                      </li> 
+                      <li className="uppercase my-4 -ml-4 text-white font-medium text-lg">
+                        <a href="#">Contact</a>
+                      </li> 
+                      <li className="uppercase my-4 -ml-4 text-white font-medium text-lg">
+                        <a href="/faq" className="">F.A.Q</a>
+                      </li>
+                    </ul>
+                  </nav>
+                  <span>
+                    
+                  </span>
+                </div>
+                  {
+                    navbarOpen ?  
+                    <FaTimes onClick={()=> setNavbarOpen(false)} style={{color: 'white', zIndex: 99999, left: 'auto', right: '36px', position: 'sticky' }} /> 
+                    :
+                    <FaBars onClick={() => setNavbarOpen(true)} style={{color: 'white', left: 'auto', right: '36px'}}/>
+                  }
+                 
+                  
+              </div>
             </div>
-            {userLinkDirect.map((link) => {
-              
-              return(
-                <li className={link.cName}>
-                  <Link to={link.direction} className={link.cname} onClick={link.cFun ? closeMobileLogout : closeMobileMenu}>
-                    {link.name}
-                  </Link>
-                </li>
-            )
-            })}
-          </ul>
+          </div>
         </div>
       </nav>
     </>

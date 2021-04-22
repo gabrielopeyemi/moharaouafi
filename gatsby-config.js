@@ -10,8 +10,14 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        name: `blogpost`,
+        path: `${__dirname}/src/blogpost`,
+      },
+    },{
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `blogfile`,
+        path: `${__dirname}/src/blogfile`,
       },
     },
     `gatsby-plugin-sass`,
@@ -20,7 +26,7 @@ module.exports = {
     `gatsby-plugin-postcss`,
     `gatsby-plugin-fontawesome-css`,
     `gatsby-plugin-emotion`,
-    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-styled-components`, 
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

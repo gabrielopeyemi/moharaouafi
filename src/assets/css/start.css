@@ -64,3 +64,9 @@
     right: 20px !important;
     cursor: pointer;
 }
+.w-illustration {
+    width: 500px;
+}
+.absolute {
+    position: absolute;
+}

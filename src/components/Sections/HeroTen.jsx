@@ -14,9 +14,36 @@ export default function HeroTen() {
         <div className="relative flex flex-wrap justify-center mx-6">
             <div className="block container lg:mt-10 mb-20">
                 <SectionHeader header = { header } />
-                <div className="w-full flex items-center justify-center bg-white shadow-sm rounded-md lg:shadow-none lg:rounded-none mt-10">
+                {/* <div className="w-full flex items-center justify-center bg-white shadow-sm rounded-md lg:shadow-none lg:rounded-none mt-10">
                     <div className="flex flex-wrap justify-center items-center py-10">
                         <div style={{width: '356px'}}>
+                        </div> 
+                    </div>
+                </div>  */}
+                <div style={{marginTop: 40, marginBottom: 40}}>
+                    <div className='row'>
+                        <div className='col-md-6 col-lg-4' style={{alignSelf: 'center'}}>
+                            <div className="text-primary">
+                                <div className="flex flex-col">
+                                    <div>
+                                        <h1 className="uppercase font-bold">Email:</h1> 
+                                        <span className="font-light">Contact@Moharaouafi.fr</span>
+                                    </div> 
+                                    <div>
+                                        <h1 className="uppercase font-bold">Téléphone:</h1> 
+                                        <span>06.26.52.02.09</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <br />
+                            <div className="text-primary">
+                                <h1 className="uppercase font-bold">Address:</h1> 
+                                <span>12 Boulevard de Cessole Nice</span> <br/>
+                                <span>Provence-Alpes-Côte d'Azur</span>  <br/>
+                                <span>06000 Nice</span>
+                            </div> 
+                        </div>
+                        <div className='col-md-6 col-lg-4'>
                             <h2 className="text-gray-600 text-2xl font-light text-center mb-10">Contacter moi</h2> 
                             <div>
                                 <div className="rounded-lg space-y-4 lg:w-contact-form">
@@ -40,32 +67,16 @@ export default function HeroTen() {
                                     </button>
                                 </div>
                             </div>
-                        </div> 
-                        <div className="hidden lg:block lg:ml-20 mt-10 lg:mt-0">
-                            <img src={IMG} alt="submit" className="w-40 lg:w-60"/>
                         </div>
-                    </div>
-                </div> 
-                <div className="flex justify-center container mt-8">
-                    <div className="w-full flex flex-wrap justify-center container">
-                        <div className="text-primary flex flex-col w-full lg:w-3/12 mt-4">
-                            <h1 className="uppercase font-bold">Address:</h1> 
-                            <span>12 Boulevard de Cessole Nice</span> 
-                            <span>Provence-Alpes-Côte d'Azur</span> 
-                            <span>06000 Nice</span>
-                        </div> 
-                        <div className="text-primary w-full lg:w-3/12 mt-4">
-                            <div className="flex flex-col">
-                                <div>
-                                    <h1 className="uppercase font-bold">Email:</h1> 
-                                    <span className="font-light">Contact@Moharaouafi.fr</span>
-                                </div> 
-                                <div>
-                                    <h1 className="uppercase font-bold">Téléphone:</h1> 
-                                    <span>06.26.52.02.09</span>
-                                </div>
+                        <div className='col-md-6 col-lg-4'  style={{alignSelf: 'center'}}>
+                            <div className="hidden lg:block lg:ml-20 mt-10 lg:mt-0">
+                                <img src={IMG} alt="submit" className="w-40 lg:w-60"/>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div className="flex justify-center container mt-8">
+                    <div className="w-full flex flex-wrap justify-center container">
                     </div>
                 </div>
             </div>

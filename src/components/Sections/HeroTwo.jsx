@@ -16,7 +16,7 @@ export default function HeroTwo() {
         <section className="flex justify-center mt-10 lg:mt-36 lg:mb-20 mx-6">
         <div className="block container">
             <div className="w-full flex flex-col lg:flex-row items-baseline">
-                <h1 className="text-gray-600 text-2xl lg:text-5xl font-bold uppercase">QUI JE SUIS ?</h1> 
+                <h1 className="text-gray-600 text-2xl lg:text-6xl font-bold uppercase">QUI JE SUIS ?</h1> 
                 <span className="text-base lg:text-2xl font-semibold lg:ml-4 mt-2 text-primary">
                     Graphiste et webdesigner créative
                 </span>

@@ -2,9 +2,13 @@ import React from 'react';
 import SectionHeader from './../SectionHeader'
 import styled from 'styled-components';
 import Carousel from 'react-elastic-carousel';
+
+
+//image
 import One from  './../../assets/Image/test/profil-1.png'
 import Two from './../../assets/Image/test/profil-2.png'
 import Three from './../../assets/Image/test/profil-3.png'
+import BG from '../../assets/Image/Avis/ok.png';
 
 
 
@@ -56,7 +60,14 @@ export default function HeroEight() {
     ]
   return (
     <Div className='justify-center mt-10 lg:mt-36 lg:mb-20 mx-6'>
-        <SectionHeader header = { Header } />
+         
+         <div class="absolute w-illustration" style={{left: '-180px', zIndex: -1000, marginBottom: '100px'}}>
+            <img src={BG} alt="illustration" style={{zIndex: -1000}}/>
+        </div>
+        <div class="w-full flex flex-col lg:flex-row items-baseline">
+            <h1 class="text-gray-600 text-2xl lg:text-5xl font-semibold uppercase">Les avis clients</h1> 
+            <span class="text-gray-600 lg:text-primary text-base lg:text-2xl font-semibold lg:ml-4 mt-2">Leurs avis sont précieux !</span>
+        </div>
         <Carousel >
             {Datas.map((data, i)=>{
                 const {content, name, img, project, id} = data;
@@ -81,10 +92,7 @@ export default function HeroEight() {
 }
 
 const Div = styled.div`
-    background-image: url('./../../assets/Image/Avis/ok.png');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: 50px 150px; 
+    margin-bottom: 100px; 
 `;
 
 const Card = styled.div`

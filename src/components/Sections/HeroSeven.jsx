@@ -46,7 +46,7 @@ export default function HeroSeven() {
         <section className="flex justify-center mx-6 sm:mt-10 lg:mt-40">
            <div className="block container">
                <div className="w-full flex flex-col lg:flex-row items-baseline mb-10">
-                   <h1 className="text-gray-600 text-2xl lg:text-5xl font-semibold uppercase">Les différentes étapes</h1> 
+                   <h1 className="text-gray-600 text-2xl lg:text-6xl font-bold uppercase">Les différentes étapes</h1> 
                    <span className="text-base lg:text-2xl font-semibold lg:ml-4 mt-2 text-primary">Déroulement d'un projet</span>
                 </div> 
                 <div className="flex flex-wrap justify-between w-full mt-10 lg:my-8">

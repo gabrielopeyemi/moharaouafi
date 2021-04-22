@@ -18,6 +18,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-postcss`,
+    `gatsby-plugin-fontawesome-css`,
     `gatsby-plugin-emotion`,
     `gatsby-plugin-styled-components`,
     {

@@ -14,12 +14,8 @@ import '../styles/css/style.css';
 import '../styles/css/owl.theme.css';
 import '../styles/css/owl.carousel.css';
 import '../styles/css/main.css';
-import { Container, Row, Col } from "react-bootstrap"
-
-import Header from "./header"
-import Navbar from "./navBar"
+import { Container } from "react-bootstrap"
 import Footer from "./Home/Footer";
-import INavbar from "./Navigation";
 
 
 const Layout = ({ children, pageInfo }) => (

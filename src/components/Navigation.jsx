@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/css/navbar.css';
 import { Link } from 'gatsby';
-import { userLinkDirect, sitename } from '../assets/data';
 import {
   FaTimes,
   FaBars
 } from 'react-icons/fa';
 import LogoImage from './Logo'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {BarsIcons, TimesIcons} from './Icons'
 
 const INavbar = (props) => {
   
@@ -71,7 +71,9 @@ const INavbar = (props) => {
                   </span>
                 </div>
                 <div style={{right: '250px', width: '30px', height: '30px'}}>
-                  <FaBars onClick={() => setNavbarOpen(true)}  style={{color: 'white', left: 'auto', right: '36px'}}/>
+                  {/* <FaBars onClick={() => setNavbarOpen(true)}  style={{color: 'white', left: 'auto', right: '36px'}}/> */}
+                  <FontAwesomeIcon icon={["fas", "coffee"]} />
+                  <BarsIcons handleClick={() => setNavbarOpen(true)}/>
                 </div>
               </div>
             </div>

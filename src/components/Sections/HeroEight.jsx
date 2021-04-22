@@ -55,7 +55,7 @@ export default function HeroEight() {
         }
     ]
   return (
-    <Div>
+    <Div className='justify-center mt-10 lg:mt-36 lg:mb-20 mx-6'>
         <SectionHeader header = { Header } />
         <Carousel >
             {Datas.map((data, i)=>{

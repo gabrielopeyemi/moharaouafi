@@ -16,7 +16,7 @@ export default function HeroTwo() {
         <section className="flex justify-center mt-10 lg:mt-36 lg:mb-20 mx-6">
         <div className="block container">
             <div className="w-full flex flex-col lg:flex-row items-baseline">
-                <h1 className="text-gray-600 text-2xl lg:text-5xl font-semibold uppercase">QUI JE SUIS</h1> 
+                <h1 className="text-gray-600 text-2xl lg:text-5xl font-bold uppercase">QUI JE SUIS ?</h1> 
                 <span className="text-base lg:text-2xl font-semibold lg:ml-4 mt-2 text-primary">
                     Graphiste et webdesigner créative
                 </span>
@@ -27,7 +27,7 @@ export default function HeroTwo() {
                 </div> 
                 <div className="w-full lg:w-8/12">
                     <div className="w-full flex flex-col lg:flex-row items-baseline mb-8">
-                        <h1 className="text-gray-600 text-2xl lg:text-6xl font-semibold uppercase">MOHA RAOUAFI</h1> 
+                        <h1 className="text-gray-600 text-2xl lg:text-6xl font-bold uppercase">MOHA RAOUAFI</h1> 
                         <span className="text-green-400 text-base lg:text-2xl font-semibold lg:ml-4 mt-2 text-primary">Nice, France</span>
                     </div> 
                     <div className="block lg:hidden text-gray-500 text-lg font-light my-4">
@@ -37,7 +37,9 @@ export default function HeroTwo() {
                             Diplômé des arts appliqués en Design et Graphisme Print, je réalise tout projet nécessitant la création d'un environn...
                         </p> 
                         <span>
-                            <a href="#" id="readmore">Lire plus</a> 
+                            <a style={{color: '#59aa8a'}} href="#" id="readmore">
+                                Lire plus
+                            </a> 
                             <a href="#" id="readmore" style={{display: 'none'}}>
                                 Lire moins
                             </a>

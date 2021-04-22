@@ -65,7 +65,7 @@ export default function HeroFive() {
       }
   ]
   return (
-    <>
+    <div className='justify-center mt-10 lg:mt-36 lg:mb-20 mx-6'>
         <SectionHeader header={ header }/>
         <Div>
           <Carousel 
@@ -83,7 +83,7 @@ export default function HeroFive() {
             <img maxWidth="50%" className="img-fluid" onMouseOver={()=> setImageenvibus(envibusTwo)} onMouseLeave={()=> setImageenvibus(envibusOne)} src={imageenvibus} alt={imageenvibus}/>
           </Carousel>                                                                                                                                                              
         </Div> 
-    </>
+    </div>
   );
 }
 const Div = styled.div`

@@ -4,7 +4,7 @@ import INavbar from '../Navigation'
 
 export default function HeroOne() {
     return (
-        <header clasName='w-full' style={{backgroundImage: 'linear-gradient(rgb(95, 175, 140), rgb(116, 196, 145))'}}>
+        <header clasName='w-full' style={{backgroundImage: 'linear-gradient(#7dce93, #59aa8a)'}}>
         <INavbar />
         <section className="bg-home bg-home-4" id="home">
             <div className="bg-overlay"></div>
@@ -19,10 +19,10 @@ export default function HeroOne() {
                                     </div>
                                 </div>
                                 <div className="col-lg-7">
-                                    <div className="home-content">
-                                        <h1 className="home-title text-white text-center">UNE QUESTION, UN PROJET ?</h1>
-                                        <p className="text-white mt-3 f-20  text-center uppercase
-                                        ">Basée sur nice, nous pouvons nous rencontrer autour d’un café pour discuter de votre projet ou par email si vous vous trouvez en dehors de </p>                  
+                                    <div className="w-full lg:w-6/12 flex flex-col items-center text-center py-10">
+                                        <h1 style={{lineHeight: 1.2}} className="my-2 text-white text-xl lg:text-3xl leading-10 uppercase font-medium lg:font-medium">VOUS CHERCHEZ À VOUS <br/> DÉMARQUER DE VOS CONCURRENTS ?</h1>
+                                        <p className="mt-6 text-white text-base lg:text-2xl uppercase font-light">OPTEZ POUR UNE IDENTITÉ VISUELLE ATTRAYANTE ET EFFICACE
+MES RÉALISATIONS</p>                    <button className='mt-10 bg-transparent border-2 border-white rounded-full py-3 px-4 text-white text-sm uppercase font-medium focus:outline-none hover:bg-white hover:text-green-600 transition duration-300'>MES RÉALISATIONS</button>
                                     </div>
                                 </div>
                             </div>

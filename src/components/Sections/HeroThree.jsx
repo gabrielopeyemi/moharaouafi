@@ -56,7 +56,7 @@ export default function HeroThree() {
   ]
   
   return (
-    <Div>
+    <Div id='service'>
       <SectionHeader header = { header }/>
       <div className='container'>
         <div className='row'>

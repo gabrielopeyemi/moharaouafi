@@ -11,15 +11,9 @@ export default function HeroTen() {
     }
   return (
     <>
-        <div className="relative flex flex-wrap justify-center mx-6">
+        <div id='contact' className="relative flex flex-wrap justify-center mx-6">
             <div className="block container lg:mt-10 mb-20">
                 <SectionHeader header = { header } />
-                {/* <div className="w-full flex items-center justify-center bg-white shadow-sm rounded-md lg:shadow-none lg:rounded-none mt-10">
-                    <div className="flex flex-wrap justify-center items-center py-10">
-                        <div style={{width: '356px'}}>
-                        </div> 
-                    </div>
-                </div>  */}
                 <div style={{marginTop: 40, marginBottom: 40}}>
                     <div className='row'>
                         <div className='col-md-6 col-lg-4' style={{alignSelf: 'center'}}>

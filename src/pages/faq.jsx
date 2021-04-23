@@ -2,11 +2,11 @@ import React, { Component } from "react";
 import { Accordion, Card } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {ENavbar} from "../components/Navigation";
-
+import Layout from './../components/layout'
 export class FAQ extends Component {
     render() {
         return (
-            <>
+            <Layout>
                 <header className='w-full' style={{backgroundImage: 'linear-gradient(#7dce93, #59aa8a)'}}>
                     <ENavbar />
                     <div class="flex justify-center">
@@ -22,7 +22,7 @@ export class FAQ extends Component {
                         <AccordionDiv />
                     </div>
                 </div>
-            </>
+            </Layout>
         );
     }
 }

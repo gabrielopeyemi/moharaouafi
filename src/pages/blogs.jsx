@@ -3,7 +3,7 @@ import {ENavbar} from '../components/Navigation';
 import { Link, graphql} from 'gatsby';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
-
+import Layout from './../components/layout'
 
 export default function Blogs({ data }) {
     console.log({MV: data.allMarkdownRemark.nodes[0].frontmatter.image.childImageSharp.fluid})
@@ -11,7 +11,7 @@ export default function Blogs({ data }) {
     const postsData = data.allMarkdownRemark.nodes;
 
     return (
-        <>
+        <Layout>
             <header className='w-full' style={{backgroundImage: 'linear-gradient(#7dce93, #59aa8a)'}}>
                 <ENavbar />
                 <div className="flex justify-center">
@@ -40,7 +40,7 @@ export default function Blogs({ data }) {
                     ))}
                 </div>
             </div>
-        </>
+        </Layout>
     )
 }
 

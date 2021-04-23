@@ -1,13 +1,14 @@
 import React from 'react'
 import {ENavbar} from '../components/Navigation'
 import {graphql} from 'gatsby';
+import Layout from './../components/layout'
 
 export default function BlogDetails({ data }) {
     console.log(data.markdownRemark)
     const { title, stack, date, image } = data.markdownRemark.frontmatter;
     const {html} = data.markdownRemark;
     return (
-        <>
+        <Layout>
             <header className='w-full' style={{backgroundImage: 'linear-gradient(#7dce93, #59aa8a)'}}>
                 <ENavbar />
                 <div className="flex justify-center">
@@ -24,7 +25,7 @@ export default function BlogDetails({ data }) {
                     <div style={{marginTop: '50px', marginBottom: '50px'}} dangerouslySetInnerHTML={{ __html: html }} />
                 </div>
             </div>
-    </>
+    </Layout>
     )
 }
 

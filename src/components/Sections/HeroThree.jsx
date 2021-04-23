@@ -14,17 +14,6 @@ import six from './../../images/img/services/6.png'
 
 export default function HeroThree() {
 
-  const data = useStaticQuery(graphql`
-        query Banner {
-            file(relativePath: {eq: "Picture-profil.png"}) {
-                childImageSharp {
-                    fluid {
-                        ...GatsbyImageSharpFluid
-                    }
-                }
-            }
-        }
-    `)
   const header = {
     one: 'Mes Services',
     two: 'Ce que je peux faire pour vous',

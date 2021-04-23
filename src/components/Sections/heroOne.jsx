@@ -1,5 +1,5 @@
 import React from 'react'
-import INavbar from '../Navigation'
+import INavbar from '../Navigation' 
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
 
@@ -7,7 +7,7 @@ export default function HeroOne() {
 
     const data = useStaticQuery(graphql`
         query Banner {
-            file(relativePath: {eq: "image-welcomes.png"}) {
+            file(relativePath: {eq: "Imagewelcomes.png"}) {
                 childImageSharp {
                     fluid {
                         ...GatsbyImageSharpFluid
@@ -15,8 +15,8 @@ export default function HeroOne() {
                 }
             }
         }
-    `)
-    console.log({VY: data})
+    `);
+    console.log({VY: data});
     return (
         <header className='w-full' style={{backgroundImage: 'linear-gradient(#7dce93, #59aa8a)'}}>
         <INavbar />

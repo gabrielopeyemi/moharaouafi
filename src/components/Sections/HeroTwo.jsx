@@ -11,7 +11,7 @@ export default function HeroTwo() {
                         ...GatsbyImageSharpFluid
                     }
                 }
-            }
+            } 
         }
     `);
     console.log({data});

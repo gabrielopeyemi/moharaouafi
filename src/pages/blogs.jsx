@@ -11,7 +11,7 @@ export default function Blogs() {
                 <div class="flex justify-center">
                     <div class="flex flex-wrap items-center container my-10 mx-6 pt-4"> 
                         <div class="w-full flex flex-col items-center text-center py-10">
-                            <h2 style={{lineHeight: 1.5}} class="my-2 text-white text-xl lg:text-3xl leading-10 uppercase font-medium lg:font-medium">Blogs</h2> 
+                            <h2 style={{lineHeight: 1.5}} class="my-2 text-white text-xl lg:text-3xl leading-10 uppercase bold lg:font-medium">Blogs</h2> 
                         </div>
                     </div>
                 </div>

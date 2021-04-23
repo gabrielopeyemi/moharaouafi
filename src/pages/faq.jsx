@@ -105,7 +105,7 @@ const AccordionDiv = () =>{
         <div className='my-10 lg:my-20'>
             <Accordion>
                 {Data.map((data, i)=>(
-                    <Card>
+                    <Card style={{ margin: '10px'}}>
                         <Accordion.Toggle as={Card.Header} eventKey={data.num} style={{padding: '30px'}}>
                             {data.head}
                         </Accordion.Toggle>

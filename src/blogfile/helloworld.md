@@ -2,6 +2,7 @@
 title: Hello World
 stack: Real deal
 slug: This is how to really say hello 
+date: 2021-01-02T00:00:00+00:00 
 ---
 
 

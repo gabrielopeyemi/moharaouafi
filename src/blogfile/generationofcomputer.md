@@ -1,13 +1,13 @@
 ---
-title: Hello World
-stack: Real deal
-slug: This is how to really say hello 
+title: Generations of computer
+stack: Computers
+slug: How compter revolued  
 ---
 
 
 
 
-**Hello Mars** consectetur adipiscing elit. Nullam faucibus a turpis et dignissim. Pellentesque nunc massa, lobortis in orci maximus, consectetur fringilla leo. Sed quis neque risus. Nunc augue lacus, facilisis ut enim in, suscipit faucibus orci. Suspendisse potenti. Ut elementum orci odio, quis tincidunt mauris dignissim nec. Nullam consequat odio sapien, vel rutrum augue bibendum at. Nam eget turpis in turpis pulvinar ullamcorper. Morbi congue, eros sed mollis lacinia, odio nulla viverra elit, nec bibendum dui lectus laoreet ante. Nullam eget ultrices metus. Phasellus nec pretium leo. Sed non odio ligula. Fusce urna elit, sagittis nec iaculis in, egestas at mi. Pellentesque non scelerisque metus. Integer egestas eros sed elit tristique, a consequat nulla tincidunt.
+**First generations of computer** consectetur adipiscing elit. Nullam faucibus a turpis et dignissim. Pellentesque nunc massa, lobortis in orci maximus, consectetur fringilla leo. Sed quis neque risus. Nunc augue lacus, facilisis ut enim in, suscipit faucibus orci. Suspendisse potenti. Ut elementum orci odio, quis tincidunt mauris dignissim nec. Nullam consequat odio sapien, vel rutrum augue bibendum at. Nam eget turpis in turpis pulvinar ullamcorper. Morbi congue, eros sed mollis lacinia, odio nulla viverra elit, nec bibendum dui lectus laoreet ante. Nullam eget ultrices metus. Phasellus nec pretium leo. Sed non odio ligula. Fusce urna elit, sagittis nec iaculis in, egestas at mi. Pellentesque non scelerisque metus. Integer egestas eros sed elit tristique, a consequat nulla tincidunt.
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque volutpat, eros eu dictum viverra, metus lectus volutpat est, eu imperdiet metus massa vitae dolor. Duis egestas, dui vitae maximus pellentesque, purus enim sollicitudin arcu, a dapibus nibh ex sed tellus. Pellentesque ornare facilisis risus sit amet gravida. Etiam congue hendrerit nibh id pellentesque. Proin lacinia velit sed mi condimentum, pulvinar finibus magna condimentum. Nunc ex sem, tincidunt sit amet lorem convallis, ultrices vestibulum erat. Nulla id tristique purus, eget dapibus lacus.
 
@@ -18,7 +18,7 @@ Nunc fringilla ac nulla ut volutpat. Nam bibendum purus at velit varius, in hend
 Donec in consectetur dui. Nunc sit amet est eu nibh pretium blandit vitae quis nibh. Aliquam eu est ipsum. Phasellus quam est, pellentesque sed enim vitae, consectetur mattis mi. Aliquam erat volutpat. Donec pulvinar, nunc eu faucibus suscipit, nibh lorem viverra nulla, at placerat eros mi quis enim. Nunc elementum lorem id libero cursus, ac dignissim dolor viverra. Donec rhoncus malesuada mi non venenatis. Maecenas suscipit volutpat vehicula. 
 
 
-### Hello Earth
+### Second generation of computer
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mi risus, lacinia eget urna quis, mollis pellentesque mi. Suspendisse suscipit dignissim consectetur. Vestibulum eleifend velit sed blandit porta. Aenean tempus lectus ut nisl elementum, ac convallis justo hendrerit. Nullam gravida porttitor nisl, ac ultrices sapien volutpat a. Integer interdum quis ipsum sit amet viverra. Integer rhoncus tempor feugiat. Vivamus eu libero et justo consequat sagittis sit amet at turpis. Phasellus efficitur vitae leo id gravida. Praesent semper augue augue. Sed ut auctor nunc. Vivamus vehicula vestibulum urna, sed mollis est congue ut. Sed augue velit, sagittis ut magna a, congue laoreet justo.
 

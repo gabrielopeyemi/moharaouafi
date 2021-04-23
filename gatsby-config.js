@@ -22,6 +22,7 @@ module.exports = {
     },
     `gatsby-plugin-sass`,
     `gatsby-transformer-sharp`,
+    `gatsby-transformer-remark`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-postcss`,
     `gatsby-plugin-fontawesome-css`,

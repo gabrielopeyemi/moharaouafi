@@ -7,14 +7,18 @@ export class FAQ extends Component {
     render() {
         return (
             <>
-                <header style={{backgroundImage: 'linear-gradient(#7dce93, #59aa8a)'}}>
+                <header className='w-full' style={{backgroundImage: 'linear-gradient(#7dce93, #59aa8a)'}}>
                     <ENavbar />
+                    <div class="flex justify-center">
+                        <div class="flex flex-wrap items-center container my-10 mx-6 pt-4"> 
+                            <div class="w-full flex flex-col items-center text-center py-10">
+                                <h2 style={{lineHeight: 1.5}} class="my-2 text-white text-xl lg:text-3xl leading-10 uppercase font-medium lg:font-medium">Foire aux questions</h2> 
+                            </div>
+                        </div>
+                    </div>
                 </header>
                 <div className='justify-center mt-10 lg:mt-36 lg:mb-20 mx-6'>
                     <div className='block container'>
-                        <div class="w-full flex flex-col justify-center lg:flex-row items-baseline">
-                            <h1 class="text-gray-600 text-2xl lg:text-5xl font-bold uppercase">Foire aux questions</h1>
-                        </div>
                         <AccordionDiv />
                     </div>
                 </div>

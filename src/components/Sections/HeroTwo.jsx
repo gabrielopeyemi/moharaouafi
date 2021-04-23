@@ -4,17 +4,17 @@ import {useStaticQuery, graphql} from 'gatsby';
 
 export default function HeroTwo() {
     const data = useStaticQuery(graphql`
-        query imgfirst {
+        query imgfisrt {
             file(relativePath: {eq: "Picture-profil.png"}) {
                 childImageSharp {
                     fluid {
                         ...GatsbyImageSharpFluid
                     }
                 }
-            } 
+            }
         }
-    `);
-    console.log({data});
+    `)
+    console.log({data})
     return ( 
         <section className="flex justify-center mt-10 lg:mt-36 lg:mb-20 mx-6">
         <div className="block container">

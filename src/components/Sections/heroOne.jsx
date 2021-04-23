@@ -1,15 +1,31 @@
 import React from 'react'
 import img from "./../../assets/Image/mac.png";
 import INavbar from '../Navigation'
+import { graphql, useStaticQuery } from 'gatsby';
+import Img from 'gatsby-image';
 
 export default function HeroOne() {
+
+    const data = useStaticQuery(graphql`
+        query Banner {
+            file(relativePath: {eq: "image-welcomes.png"}) {
+                childImageSharp {
+                    fluid {
+                        ...GatsbyImageSharpFluid
+                    }
+                }
+            }
+        }
+    `)
+    console.log({VY: data})
     return (
         <header className='w-full' style={{backgroundImage: 'linear-gradient(#7dce93, #59aa8a)'}}>
         <INavbar />
         <div class="flex justify-center">
             <div class="flex flex-wrap items-center container my-10 mx-6 pt-4">
                 <div class="w-full lg:w-6/12 flex justify-start">
-                    <img src={img} alt="Illustration Mac" class="relative right-50 lg:right-100 w-full lg:w-bg-mac select-none lg:pr-4"/>
+                    {/* <img src={img} alt="Illustration Mac" class="relative right-50 lg:right-100 w-full lg:w-bg-mac select-none lg:pr-4"/> */}
+                    <Img fluid={data.file.childImageSharp.fluid}  className="relative right-50 lg:right-100 w-full lg:w-bg-mac select-none lg:pr-4"/>
                 </div> 
                 <div class="w-full lg:w-6/12 flex flex-col items-center text-center py-10">
                     <h2 style={{lineHeight: 1.5}} class="my-2 text-white text-xl lg:text-3xl leading-10 uppercase font-medium lg:font-medium">VOUS CHERCHEZ À VOUS <br/> DÉMARQUER DE VOS CONCURRENTS ? </h2> 

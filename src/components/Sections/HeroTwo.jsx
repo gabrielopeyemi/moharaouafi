@@ -1,17 +1,20 @@
 import React from 'react'
-import SectionHeader from './../SectionHeader';
-import IMG from './../../images/img/moha.png';
 import styled from 'styled-components'
+import Img from 'gatsby-image';
+import {useStaticQuery} from 'gatsby';
 
 export default function HeroTwo() {
-    const header = {
-        one: 'QUI JE SUIS',
-        two: 'Graphiste et webdesigner créative'
-    }
-    const headertwo = {
-        one: 'MOHA RAOUAFI',
-        two: 'Nice, France'
-    }
+    const data = useStaticQuery(graphql`
+        query Banner {
+            file(relativePath: {eq: "Picture-profil.png"}) {
+                childImageSharp {
+                    fluid {
+                        ...GatsbyImageSharpFluid
+                    }
+                }
+            }
+        }
+    `)
     return ( 
         <section className="flex justify-center mt-10 lg:mt-36 lg:mb-20 mx-6">
         <div className="block container">
@@ -23,7 +26,7 @@ export default function HeroTwo() {
             </div>
             <div className="flex flex-wrap items-center my-10 lg:my-20">
                 <div className="w-full flex justify-center lg:w-4/12">
-                    <img src={IMG} alt="moha" className="w-64 lg:w-96 pr-10 pb-10"/>
+                    <Img fluid={data.file.childImageSharp.fluid} className="w-64 lg:w-96 pr-10 pb-10"/>
                 </div> 
                 <div className="w-full lg:w-8/12">
                     <div className="w-full flex flex-col lg:flex-row items-baseline mb-8">

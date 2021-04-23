@@ -13,16 +13,38 @@ module.exports = {
         name: `blogpost`,
         path: `${__dirname}/src/blogpost`,
       },
-    },{
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `blogfile`,
         path: `${__dirname}/src/blogfile`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `Images`,
+        path: `${__dirname}/src/assets/Image/blog`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `ProfileImages`,
+        path: `${__dirname}/src/assets/Image/Profil`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `ServicesImages`,
+        path: `${__dirname}/src/assets/Image/Services`,
+      },
+    },
     `gatsby-plugin-sass`,
     `gatsby-transformer-sharp`,
-    `gatsby-transformer-remark`,
+    `gatsby-transformer-remark`, 
     `gatsby-plugin-sharp`,
     `gatsby-plugin-postcss`,
     `gatsby-plugin-fontawesome-css`,

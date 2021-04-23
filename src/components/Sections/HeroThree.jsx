@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components'
 import SectionHeader from './../SectionHeader';
 import ServiceCard from './../ServiceCard';
+import {useStaticQuery} from 'gatsby';
+
 import one from './../../images/img/services/1.png'
 import two from './../../images/img/services/2.png'
 import three from './../../images/img/services/3.png'
@@ -11,6 +13,18 @@ import six from './../../images/img/services/6.png'
 
 
 export default function HeroThree() {
+
+  const data = useStaticQuery(graphql`
+        query Banner {
+            file(relativePath: {eq: "Picture-profil.png"}) {
+                childImageSharp {
+                    fluid {
+                        ...GatsbyImageSharpFluid
+                    }
+                }
+            }
+        }
+    `)
   const header = {
     one: 'Mes Services',
     two: 'Ce que je peux faire pour vous',

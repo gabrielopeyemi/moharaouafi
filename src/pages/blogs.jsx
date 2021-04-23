@@ -2,8 +2,10 @@ import React from 'react'
 import {ENavbar} from '../components/Navigation';
 import { Link, graphql} from 'gatsby';
 import Img from 'gatsby-image';
+import styled from 'styled-components';
 
-export default function Blogs({data}) {
+
+export default function Blogs({ data }) {
     console.log({MV: data.allMarkdownRemark.nodes[0].frontmatter.image.childImageSharp.fluid})
 
     const postsData = data.allMarkdownRemark.nodes;
@@ -21,20 +23,20 @@ export default function Blogs({data}) {
                 </div>
             </header>
             <div className='container'>
-                <div className='row' style={{marginTop: '50px'}}>
+                <div className='row' style={{marginTop: '50px', marginBottom: '100px', justifyContent: 'center'}}>
                     {postsData.map((post)=>(
-                        <Link to={`/blog/${post.frontmatter.slug}`} key={post.id}>
+                        <MainLink to={`/blogs/${post.frontmatter.slug}`} key={post.id}>
                             <div className='col-md-4 col-sm-12'>
                                 <div className="card" style={{width: '18rem'}}>
                                     <Img fluid={post.frontmatter.image.childImageSharp.fluid} />
                                     <div className="card-body">
-                                        <h5 className="card-title">{post.frontmatter.title}</h5>
+                                        <h3 className="card-title">{post.frontmatter.title}</h3>
                                         <p className="card-text">{post.frontmatter.date}</p>
-                                        <a href="#" className="btn btn-primary">Go somewhere</a>
+                                        <Link style={{float: 'left'}} to={`/blogs/${post.frontmatter.slug}`}>Learn more</Link>
                                     </div>
                                 </div>
                             </div>
-                        </Link>
+                        </MainLink>
                     ))}
                 </div>
             </div>
@@ -42,6 +44,13 @@ export default function Blogs({data}) {
     )
 }
 
+
+const MainLink = styled(Link)`
+    margin-bottom: 30px;
+    &:hover{
+        color: #000 !important;
+    }
+`;
 
 // export page query
 

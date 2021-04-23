@@ -1,0 +1,11 @@
+div.main {
+  min-height: 100vh;
+}
+
+div.full-height {
+  min-height: 100vh;
+}
+
+a.link-no-style:hover {
+  text-decoration: none;
+}

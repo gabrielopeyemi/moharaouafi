@@ -73,14 +73,14 @@ export default function HeroFive() {
             itemPadding={[10, 50]}
             breakPoints={breakPoints}
           >
-            <img maxWidth="50%" className="img-fluid" onMouseOver={()=> setImageOne(CashArcadeTwo)} onMouseLeave={()=> setImageOne(CashArcadeOne)} src={imageOne} alt={imageOne}/>
-            <img maxWidth="50%" className="img-fluid" onMouseOver={()=> setImageDEBS(DEBSTwo)} onMouseLeave={()=> setImageDEBS(DEBSOne)} src={imageDEBS} alt={imageDEBS}/>
-            <img maxWidth="50%" className="img-fluid" onMouseOver={()=> setImagfruiteo(fruiteoTwo)} onMouseLeave={()=> setImagfruiteo(fruiteoOne)} src={imagefruiteo} alt={imagefruiteo}/>
-            <img maxWidth="50%" className="img-fluid" onMouseOver={()=> setImageSauceSissi(SauceSissiTwo)} onMouseLeave={()=> setImageSauceSissi(SauceSissiOne)} src={imageSauceSissi} alt={imageSauceSissi}/>
-            <img maxWidth="50%" className="img-fluid" onMouseOver={()=> setImageVictoriaInfinity(VictoriaInfinityTwo)} onMouseLeave={()=> setImageVictoriaInfinity(VictoriaInfinityOne)} src={imageVictoriaInfinity} alt={imageVictoriaInfinity}/>
-            <img maxWidth="50%" className="img-fluid" onMouseOver={()=> setImageLaxess(LaxessTwo)} onMouseLeave={()=> setImageLaxess(LaxessOne)} src={imageLaxess} alt={imageLaxess}/>
-            <img maxWidth="50%" className="img-fluid" onMouseOver={()=> setImagecfdt(cfdtTwo)} onMouseLeave={()=> setImagecfdt(cfdtOne)} src={imagecfdt} alt={imagecfdt}/>
-            <img maxWidth="50%" className="img-fluid" onMouseOver={()=> setImageenvibus(envibusTwo)} onMouseLeave={()=> setImageenvibus(envibusOne)} src={imageenvibus} alt={imageenvibus}/>
+            <img maxWidth="50%" className="img-fluid" onFocus={ () => void 0 } onMouseOver={()=> setImageOne(CashArcadeTwo)} onMouseLeave={()=> setImageOne(CashArcadeOne)} src={imageOne} alt={imageOne}/>
+            <img maxWidth="50%" className="img-fluid" onFocus={ () => void 0 } onMouseOver={()=> setImageDEBS(DEBSTwo)} onMouseLeave={()=> setImageDEBS(DEBSOne)} src={imageDEBS} alt={imageDEBS}/>
+            <img maxWidth="50%" className="img-fluid" onFocus={ () => void 0 } onMouseOver={()=> setImagfruiteo(fruiteoTwo)} onMouseLeave={()=> setImagfruiteo(fruiteoOne)} src={imagefruiteo} alt={imagefruiteo}/>
+            <img maxWidth="50%" className="img-fluid" onFocus={ () => void 0 } onMouseOver={()=> setImageSauceSissi(SauceSissiTwo)} onMouseLeave={()=> setImageSauceSissi(SauceSissiOne)} src={imageSauceSissi} alt={imageSauceSissi}/>
+            <img maxWidth="50%" className="img-fluid" onFocus={ () => void 0 } onMouseOver={()=> setImageVictoriaInfinity(VictoriaInfinityTwo)} onMouseLeave={()=> setImageVictoriaInfinity(VictoriaInfinityOne)} src={imageVictoriaInfinity} alt={imageVictoriaInfinity}/>
+            <img maxWidth="50%" className="img-fluid" onFocus={ () => void 0 } onMouseOver={()=> setImageLaxess(LaxessTwo)} onMouseLeave={()=> setImageLaxess(LaxessOne)} src={imageLaxess} alt={imageLaxess}/>
+            <img maxWidth="50%" className="img-fluid" onFocus={ () => void 0 } onMouseOver={()=> setImagecfdt(cfdtTwo)} onMouseLeave={()=> setImagecfdt(cfdtOne)} src={imagecfdt} alt={imagecfdt}/>
+            <img maxWidth="50%" className="img-fluid" onFocus={ () => void 0 } onMouseOver={()=> setImageenvibus(envibusTwo)} onMouseLeave={()=> setImageenvibus(envibusOne)} src={imageenvibus} alt={imageenvibus}/>
           </Carousel>                                                                                                                                                              
         </Div> 
     </div>

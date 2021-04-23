@@ -1,6 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
-import BGIMG from './../../assets/Image/DiscoveryCall/web.jpg'
 
 export default function HeroNine() {
   return (
@@ -19,7 +17,7 @@ export default function HeroNine() {
                 <div className="my-6 mx-6 font-light uppercase max-w-2xl">
                     Je vous propose un RDV gratuit de 1 heures pendant lequel nous analysons vos supports, votre image et vos objectifs.
                 </div> 
-                <a target="_blank" href="https://calendly.com/moharaouafi/diagnostic" className="flex items-center roup animation duration-300 ease-in-out relative lg:w-96 mb-20 hover:bg-opacity-90 uppercase justify-center my-10 py-3 px-4 text-sm font-medium rounded-md text-primary bg-white hover:bg-white focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-gray-100">
+                <a href="https://calendly.com/moharaouafi/diagnostic" className="flex items-center roup animation duration-300 ease-in-out relative lg:w-96 mb-20 hover:bg-opacity-90 uppercase justify-center my-10 py-3 px-4 text-sm font-medium rounded-md text-primary bg-white hover:bg-white focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-gray-100">
                     <svg viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg" className="w-6 fill-current text-primary">
                         <g>
                             <g>
@@ -38,52 +36,3 @@ export default function HeroNine() {
   );
 }
 
-
-const Div = styled.div`    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 30px;
-    padding-bottom: 3.5rem;
-    text-transform: uppercase;
-    background-repeat: no-repeat;
-    background-position: 50% 50%; 
-    /* color: white; */
-
-`;
-
-const Header = styled.h1`
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-    margin: 1.5rem;
-    font-weight: 600;
-    color: #fff;
-`;
-
-const SpanOne = styled.p`
-    text-transform: uppercase;
-    color: #fff;
-    text-align: center;
-    margin: 1.5rem;
-`;
-
-const Svg = styled.svg`
-    width: 1.5rem;
-    color: #61b38c !important;
-`
-
-const SpanTwo = styled.p`
-    color: #fff;
-    text-align: center;
-    margin: 1.5rem;
-`;
-
-const Button = styled.a`
-    text-align: center;
-    color: #61b38c;
-    background-color: #fff !important;
-    border-color: #fff !important;
-    &:hover{    
-        color: #61b38c;
-    }
-`;

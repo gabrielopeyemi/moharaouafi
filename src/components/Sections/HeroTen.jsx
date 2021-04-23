@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 import IMG from './../../assets/Image/Contact/plane.png'
 import SectionHeader from './../SectionHeader'
 import "./../../assets/css/tailwind.css";

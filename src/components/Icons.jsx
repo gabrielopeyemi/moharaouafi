@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import BARS from './../images/icons/menu.png';
 import TIMES from './../images/icons/times.png';
 

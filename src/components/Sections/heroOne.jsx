@@ -1,5 +1,4 @@
 import React from 'react'
-import img from "./../../assets/Image/mac.png";
 import INavbar from '../Navigation'
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';

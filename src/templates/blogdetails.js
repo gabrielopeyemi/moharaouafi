@@ -5,7 +5,7 @@ import Layout from './../components/layout'
 
 export default function BlogDetails({ data }) {
     console.log(data.markdownRemark)
-    const { title, stack, date, image } = data.markdownRemark.frontmatter;
+    const { title, stack } = data.markdownRemark.frontmatter;
     const {html} = data.markdownRemark;
     return (
         <Layout>

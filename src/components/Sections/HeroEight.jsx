@@ -1,5 +1,4 @@
 import React from 'react';
-import SectionHeader from './../SectionHeader'
 import styled from 'styled-components';
 import Carousel from 'react-elastic-carousel';
 
@@ -13,10 +12,6 @@ import BG from '../../assets/Image/Avis/ok.png';
 
 
 export default function HeroEight() {
-    const Header = {
-        one: "Les avis clients",
-        two: "Leurs avis sont précieux !"
-    }
     const Datas = [
         {
             id: 1,
@@ -44,20 +39,6 @@ export default function HeroEight() {
 
     // https://moharaouafi.fr/wp-json/wp/v2/posts
 
-    const breakPoints = [
-        {
-            width: 1, itemsToShow: 1
-        },
-        {
-            width: 550, itemsToShow: 2
-        },
-        {
-            width: 768, itemsToShow: 3
-        },
-        {
-            width: 1200, itemsToShow: 4
-        }
-    ]
   return (
     <Div className='justify-center mt-10 lg:mt-36 lg:mb-20 mx-6'>
          
@@ -69,7 +50,7 @@ export default function HeroEight() {
             <span class="text-gray-600 lg:text-primary text-base lg:text-2xl font-semibold lg:ml-4 mt-2">Leurs avis sont précieux !</span>
         </div>
         <Carousel >
-            {Datas.map((data, i)=>{
+            {Datas.map((data)=>{
                 const {content, name, img, project, id} = data;
                 return(
                     <Card key={id}>

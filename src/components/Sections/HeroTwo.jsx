@@ -1,5 +1,4 @@
 import React from 'react'
-import styled from 'styled-components'
 import Img from 'gatsby-image';
 import {useStaticQuery, graphql} from 'gatsby';
 
@@ -67,16 +66,3 @@ export default function HeroTwo() {
     </section>
     )
 }
-
-const P = styled.p`
-    color: #6b7280;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-`;
-const Div = styled.div`
-    max-width: 1280px;
-    width: 100%;   
-    margin: 1.5rem 1.5rem 150px 1.5rem;
-`; 

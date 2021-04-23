@@ -1,6 +1,4 @@
 import React from 'react';
-import SectionHeader from './../SectionHeader';
-import styled from 'styled-components'
 
 //Image
 import One from '../../assets/Image/NumberedIcon/Icone-1.png';
@@ -11,10 +9,6 @@ import Four from '../../assets/Image/NumberedIcon/Icone-4.png';
 
 
 export default function HeroSeven() {
-    const header={
-        one: 'Les différentes étapes',
-        two: "Déroulement d'un projet"
-    }
     const Data = [
         {
             id: 1,
@@ -68,51 +62,20 @@ export default function HeroSeven() {
   );
 }
 
-const Card = (props) => {
-    const { img, content, title }= props.data;
-    console.log({props})
-    return(
-        <div classNameName='col-md-6'>
-            <Div classNameName="card">
-                {/* <Img src={image} classNameName="img-thumbnail" alt={image}/> */}
-                <div classNameName="card-body"> 
-                    <Img src={img} alt={img} />
-                    <CardHeader classNameName="card-title">{title}</CardHeader>
-                    <Paragraph classNameName="card-text">{content}</Paragraph>
-                    {/* <a href="#" classNameName="btn btn-primary">Go somewhere</a> */}
-                </div>
-            </Div>
-        </div>
-    )
-}
-
-const Div = styled.div`
-    transition-duration: 300ms;
-    transition-property: box-shadow;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    height: 400px;
-    justify-content: center;
-    cursor: pointer;
-    border: 0;
-    margin: auto;
-    margin-bottom: 20px;
-    &:hover{
-        border: 2px solid #f3f3f3;
-        --tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-        box-shadow: var(#f3f3f3, 0 0 #0000), var(#f3f3f3, 0 0 #0000), var(#f3f3f3);    
-    };
-`;
-const CardHeader = styled.h2`
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-    text-transform: uppercase;
-`;
-const Img = styled.img`
-    
-`;
-const Paragraph = styled.p`
-
-`;
+// const Card = (props) => {
+//     const { img, content, title }= props.data;
+//     console.log({props})
+//     return(
+//         <div classNameName='col-md-6'>
+//             <Div classNameName="card">
+//                 {/* <Img src={image} classNameName="img-thumbnail" alt={image}/> */}
+//                 <div classNameName="card-body"> 
+//                     <Img src={img} alt={img} />
+//                     <CardHeader classNameName="card-title">{title}</CardHeader>
+//                     <Paragraph classNameName="card-text">{content}</Paragraph>
+//                     {/* <a href="#" classNameName="btn btn-primary">Go somewhere</a> */}
+//                 </div>
+//             </Div>
+//         </div>
+//     )
+// }

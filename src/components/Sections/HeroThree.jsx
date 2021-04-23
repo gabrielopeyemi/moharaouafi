@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components'
 import SectionHeader from './../SectionHeader';
 import ServiceCard from './../ServiceCard';
-import {useStaticQuery} from 'gatsby';
 
 import one from './../../images/img/services/1.png'
 import two from './../../images/img/services/2.png'

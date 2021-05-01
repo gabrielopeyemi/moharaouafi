@@ -67,7 +67,7 @@ export const query = graphql`
             title
             date(fromNow: true)
             image {
-            childImageSharp {
+            childImageSharp { 
                 fluid {
                     ...GatsbyImageSharpFluid
                 }

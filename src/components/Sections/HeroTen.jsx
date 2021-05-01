@@ -15,8 +15,8 @@ export default function HeroTen() {
                 <SectionHeader header = { header } />
                 <div style={{marginTop: 40, marginBottom: 40}}>
                     <div className='row'>
-                        <div className='col-md-6 col-lg-4' style={{alignSelf: 'center'}}>
-                            <div className="text-primary">
+                        <div className='col-md-6 col-lg-4 addressz' style={{alignSelf: 'center'}}>
+                            <div className="text-primary contact">
                                 <div className="flex flex-col">
                                     <div>
                                         <h1 className="uppercase font-bold">Email:</h1> 
@@ -37,11 +37,11 @@ export default function HeroTen() {
                             </div> 
                         </div>
                         <div className='col-md-6 col-lg-4'>
-                            <h2 className="text-gray-600 text-2xl font-light text-center mb-10">Contacter moi</h2> 
+                            <h2 className="text-gray-600 text-2xl font-light text-center mb-10">Contactez-moi</h2> 
                             <div>
                                 <div className="rounded-lg space-y-4 lg:w-contact-form">
                                     <div>
-                                        <label  className="sr-only">Nom</label> 
+                                        <label className="sr-only">Nom</label> 
                                         <input id="name" name="name" type="text" required="required" placeholder="Nom" className="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-green-500 focus:border-green-500 focus:z-10 sm:text-sm"/>
                                     </div> 
                                     <div>

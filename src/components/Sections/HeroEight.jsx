@@ -34,22 +34,22 @@ export default function HeroEight() {
             project: 'Victoria Infinity',
             content: `“De la création d'un site internet à celle d'un dépliant, Moha Raouafi sait mettre à notre service ses multiples compétences dans le travail : fiable, à l'écoute et d'excellent conseil, ses propositions sont d'une grande efficacité.”`,            img: Three,
         }
-
-    ]
-
+    ];
     // https://moharaouafi.fr/wp-json/wp/v2/posts
-
   return (
-    <Div className='justify-center mt-10 lg:mt-36 lg:mb-20 mx-6'>
-         
-         <div class="absolute w-illustration" style={{left: '-180px', zIndex: -1000, marginBottom: '100px'}}>
+    <section className="flex justify-center mt-10 lg:mt-36 lg:mb-20 mx-6">
+        <div class="absolute w-illustration" style={{left: '-180px', zIndex: -1000, marginBottom: '100px'}}>
             <img src={BG} alt="illustration" style={{zIndex: -1000}}/>
         </div>
-        <div class="w-full flex flex-col lg:flex-row items-baseline">
-            <h1 class="text-gray-600 text-2xl lg:text-5xl font-semibold uppercase">Les avis clients</h1> 
-            <span class="text-gray-600 lg:text-primary text-base lg:text-2xl font-semibold lg:ml-4 mt-2">Leurs avis sont précieux !</span>
-        </div>
-        <Carousel >
+        <div className="block container">
+            <div className="w-full flex flex-col lg:flex-row items-baseline">
+                <h1 className="text-gray-600 text-2xl lg:text-6xl font-bold uppercase" style={{fontFamily: `'Poppins', sans-serif`}}>Les avis clients</h1> 
+                <span className="text-base lg:text-2xl font-semibold lg:ml-4 mt-2 text-primary">
+                    Leurs avis sont précieux !
+                </span>
+            </div>
+            <div className="flex flex-wrap items-center my-10 lg:my-20">
+            <Carousel >
             {Datas.map((data)=>{
                 const {content, name, img, project, id} = data;
                 return(
@@ -68,14 +68,11 @@ export default function HeroEight() {
                 )
             })}
         </Carousel>
-    </Div>
+            </div>
+        </div>
+    </section>
   );
 }
-
-const Div = styled.div`
-    margin-bottom: 100px; 
-`;
-
 const Card = styled.div`
     margin: 20px;
     padding: 20px;

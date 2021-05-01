@@ -1,23 +1,14 @@
 import React from 'react';
-import styled from 'styled-components'
-import SectionHeader from './../SectionHeader';
+
 import ServiceCard from './../ServiceCard';
-
-import one from './../../images/img/services/1.png'
-import two from './../../images/img/services/2.png'
-import three from './../../images/img/services/3.png'
-import four from './../../images/img/services/4.png'
-import five from './../../images/img/services/5.png'
-import six from './../../images/img/services/6.png'
-
+import one from './../../images/img/services/1.png';
+import two from './../../images/img/services/2.png';
+import three from './../../images/img/services/3.png';
+import four from './../../images/img/services/4.png';
+import five from './../../images/img/services/5.png';
+import six from './../../images/img/services/6.png';
 
 export default function HeroThree() {
-
-  const header = {
-    one: 'Mes Services',
-    two: 'Ce que je peux faire pour vous',
-    image: one
-  }
   const Data = [
       {
         id: 1,
@@ -55,24 +46,24 @@ export default function HeroThree() {
     desc: `Formation possible entre autres des logiciels suivants : Adobe Photoshop, Adobe Illustrator, Adobe XD, Adobe InDesign..`,
     image: six
     },
-  ]
-  
+  ];
   return (
-    <Div id='service'>
-      <SectionHeader header = { header }/>
-      <div className='container'>
-        <div className='row'>
-          {Data.map((data, i)=>(
-            <ServiceCard data={data} key={i}/>
-          ))}
+    <section className="flex justify-center mt-10 lg:mt-36 lg:mb-20 mx-6">
+        <div className="block container">
+            <div className="w-full flex flex-col lg:flex-row items-baseline">
+                <h1 className="text-gray-600 text-2xl lg:text-6xl font-bold uppercase" style={{fontFamily: `'Poppins', sans-serif`}}>Mes Services</h1> 
+                <span className="text-base lg:text-2xl font-semibold lg:ml-4 mt-2 text-primary">
+                  Ce que je peux faire pour vous
+                </span>
+            </div>
+            <div className="flex flex-wrap items-center my-10 lg:my-20">
+              <div className='row'>
+                {Data.map((data, i)=>(
+                  <ServiceCard data={data} key={i}/>
+                ))}
+              </div>
+            </div>
         </div>
-      </div>
-    </Div>
+    </section>
   );
-}
-
-const Div = styled.div`
-    max-width: 1280px;
-    width: 100%;   
-    margin: 1.5rem 1.5rem 80px 1.5rem;
-`;
+};

@@ -1,5 +1,6 @@
-import React from 'react'
-import INavbar from '../Navigation' 
+import React from 'react';
+import styled from 'styled-components';
+import INavbar from '../Navigation';
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
 
@@ -27,9 +28,9 @@ export default function HeroOne() {
                     <Img fluid={data.file.childImageSharp.fluid} style={{left: '-30px'}}  className="relative right-50 lg:right-100 w-full lg:w-bg-mac select-none lg:pr-4"/>
                 </div> 
                 <div class="w-full lg:w-6/12 flex flex-col items-center text-center py-10">
-                    <h2 style={{lineHeight: 1.5, fontWeight: '900'}} class="my-2 text-white text-xl lg:text-3xl leading-10 uppercase font-medium lg:font-medium">VOUS CHERCHEZ À VOUS <br/> DÉMARQUER DE VOS CONCURRENTS ? </h2> 
-                    <p class="mt-6 text-white text-base lg:text-2xl uppercase font-light">Basée sur nice, nous pouvons nous rencontrer autour d’un café pour discuter de votre projet ou par email si vous vous trouvez en dehors de nice</p> 
-                    <button class="mt-10 bg-transparent border-2 border-white rounded-full py-3 px-4 text-white text-sm uppercase font-medium focus:outline-none hover:bg-white hover:text-green-600 transition duration-300">Mes réalisations</button>
+                    <H2 class="my-2 leading-10">VOUS CHERCHEZ À VOUS <br/> DÉMARQUER DE VOS CONCURRENTS ? </H2> 
+                    <P class="mt-6 text-base lg:text-2xl">Basée sur nice, nous pouvons nous rencontrer autour d’un café pour discuter de votre projet ou par email si vous vous trouvez en dehors de nice</P> 
+                    <button class="mt-6 bg-transparent border-2 border-white rounded-full py-3 px-4 text-white text-sm uppercase font-medium focus:outline-none hover:bg-white hover:text-green-600 transition duration-300">Mes réalisations</button>
                 </div>
             </div>
         </div>
@@ -37,3 +38,42 @@ export default function HeroOne() {
         </header>
     )
 }
+
+
+const H2 = styled.h2`
+    text-transform: uppercase;
+    font-weight: 900;
+    color: white;
+    font-size: 27px;
+    @media only screen and (max-width: 655px){
+        font-size: 25px;
+    };
+    @media only screen and (max-width: 639px){
+        font-size: 23px;
+    };
+    @media only screen and (max-width: 572px){
+        font-size: 22px;
+    };
+    @media only screen and (max-width: 551px){
+        font-size: 18px;
+    };
+    @media only screen and (max-width: 380px){
+        font-size: 13px;
+    };
+`;
+
+const P = styled.p`
+    color: white;
+    @media only screen and (max-width: 655px){
+        font-size: 20px;
+    };
+    @media only screen and (max-width: 639px){
+        font-size: 20px;
+    };
+    @media only screen and (max-width: 551px){
+        font-size: 17px;
+    };
+    @media only screen and (max-width: 380px){
+        font-size: 13px;
+    };
+`;

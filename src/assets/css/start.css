@@ -119,3 +119,57 @@
     border: 1px solid rgba(0,0,0,.125);
     border-radius: .25rem;
 }
+.rec.rec-arrow {
+    border-radius: 0 ;
+    background-color: #fff0 !important;
+    color: black;
+    width: 30px;
+    height: 30px;
+    line-height: 0px;
+    min-width: 30px;
+    font-size: 20px; 
+}
+@media only screen and (max-width: 456px){ 
+    .rec.rec-arrow {
+        border-radius: 0 ;
+        background-color: #fff0 !important;
+        color: black;
+        width: 25px;
+        height: 25px;
+        line-height: 0px;
+        min-width: 25px;
+        font-size: 10px;
+        
+    } 
+}
+.rec.rec-arrow:hover {
+    border-radius: 50%;
+}
+.rec-dot_active{
+    color: rgb(97, 179, 140);
+    background-color: #65b58e !important;
+}
+.rec .rec-dot{
+    color: rgb(97, 179, 140);
+    background-color: #4b5563;
+}
+.rec .rec-carousel-item .rec-carousel-item-2 .rec-carousel-item-visible{
+    margin: auto;
+}
+.addressz{
+    align-self: center;
+    left: 110px;
+    display: flex;
+    flex-direction: column;
+}
+.contact{
+    margin-bottom: 20px;
+}
+@media only screen and (max-width: 768px){
+    .addressz{
+        align-self: center;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+    }
+}

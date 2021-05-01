@@ -173,3 +173,31 @@
         flex-direction: column;
     }
 }
+.wave {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url('./../../assets/Image/wave.png');
+        background-size: auto;
+    background-size: 1000px 100px;
+    -webkit-animation: animateIn 10s linear infinite;
+    animation: animateIn 10s linear infinite;
+    animation-delay: 0s;
+    z-index: 1000;
+    opacity: 1;
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+    bottom: 0;
+    position: static;
+    background-image: url('./../Image/wave.png');
+}
+
+@keyframes animateIn {
+    0%{
+        background-position-x: 0;
+    }
+    100%{
+        background-position-x: 1000px;
+    }
+}

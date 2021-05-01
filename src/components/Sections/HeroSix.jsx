@@ -1,7 +1,50 @@
 import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image';
 import styled from 'styled-components';
+// import GalleryCard from './../GalleryCard';
 
 export default function HeroSix() {
+
+    const Data = useStaticQuery(graphql`
+    query Portfolio {
+        allMarkdownRemark(filter: {frontmatter: {group: {eq: "Portfolio"}}}) {
+          nodes {
+            frontmatter {
+              Name
+              group
+              date(fromNow: false)
+              title
+              stack
+              slug
+              imageMobile {
+                childImageSharp {
+                  fluid {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
+              imagePC {
+                childImageSharp {
+                  fluid {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
+              image {
+                childImageSharp {
+                  fluid {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
+            }
+          }
+        }
+      }      
+    `)
+      const Galleries = Data.allMarkdownRemark.nodes;
+      console.log({Galleries})
   return (
     <>
         <section className="flex justify-center mx-6 sm:mt-10 lg:mt-40">
@@ -11,17 +54,22 @@ export default function HeroSix() {
                    <span className="text-base lg:text-2xl font-semibold lg:ml-4 mt-2 text-primary"></span>
                 </div> 
                 <div className="flex flex-wrap justify-between w-full mt-10 lg:my-8">
-                    {/* {Data.map((data, i)=>(
-                        <div className="w-full lg:w-6/12 flex justify-center">
-                            <div className="w-96 pr-6 py-6 lg:p-6 lg:hover:shadow-md">
-                                <img src={data.img} alt={data.img} className="h-30"/> 
-                                <h2 className="text-gray-500 font-semibold text-xl uppercase">{data.title}</h2> 
-                                <p className="text-gray-600 text-base mt-6">
-                                     {data.content}
-                                </p>
-                            </div>
-                        </div> 
-                    ))} */}
+                    <CardWarp>
+                        {/* {Galleries.map((gallery) => (
+                             <Img fluid={gallery.frontmatter.image.childImageSharp.fluid} />
+                        ))} */}
+                        {Galleries.map((post)=>(
+                            <CardItem>
+                                <div>
+                                    <Img style={{width: '100%'}} fluid={post.frontmatter.image.childImageSharp.fluid} />
+                                    {/* <div className="card-body">
+                                        <h3 className="card-title">{post.frontmatter.title}</h3>
+                                        <p className="card-text">{post.frontmatter.date}</p>
+                                     </div> */}
+                                </div>
+                            </CardItem>
+                        ))}
+                    </CardWarp>
                 </div>
             </div>
         </section>
@@ -30,6 +78,29 @@ export default function HeroSix() {
 }
 
 
-const Card = styled.div`
+const CardWarp = styled.div`
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+`;
 
+const CardItem = styled.div`
+    padding: 10px;
+    width: 33%;
+    min-height: 18rem;
+    @media only screen and (max-width: 768px){
+        width: 49%
+    };
+    @media only screen and (max-width: 524px){
+        width: 100%;
+    }
+`;
+
+const CardInner = styled.div`
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 30px 200px;
+    width: 100%;
 `;

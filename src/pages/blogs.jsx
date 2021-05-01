@@ -55,27 +55,27 @@ const MainLink = styled(Link)`
 // export page query
 
 export const query = graphql`
-query postData {
-  site(siteMetadata: {}) {
-    id
-  }
-  allMarkdownRemark(sort: {fields: id}) {
-    nodes {
-      frontmatter {
-        slug
-        stack
-        title
-        date(fromNow: true)
-        image {
-          childImageSharp {
-            fluid {
-                ...GatsbyImageSharpFluid
-            }
-          }
-        }
-      }
-      id
+    query postData {
+    site(siteMetadata: {}) {
+        id
     }
-  }
-}
+    allMarkdownRemark(sort: {fields: id}, filter: {frontmatter: {group: {eq: "Blog"}}}) {
+        nodes {
+        frontmatter {
+            slug
+            stack
+            title
+            date(fromNow: true)
+            image {
+            childImageSharp {
+                fluid {
+                    ...GatsbyImageSharpFluid
+                }
+            }
+            }
+        }
+        id
+        }
+    }
+    }
 `;

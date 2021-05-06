@@ -11,10 +11,6 @@ import {BarsIcons} from './Icons'
 const INavbar = () => {
   
     const [navbarOpen , setNavbarOpen ] = useState(false)
- 
-
-  
-
     return (
       <>
         <nav className="flex justify-center">
@@ -24,17 +20,8 @@ const INavbar = () => {
             </Link> 
             <ul className="hidden lg:flex">
               <li className="uppercase mx-5 text-white font-medium text-lg">
-                <a href="#service">Service</a>
-              </li> 
-              <li className="uppercase mx-5 text-white font-medium text-lg">
-                <a href="#">Portfolio</a>
-              </li> 
-              <li className="uppercase mx-5 text-white font-medium text-lg">
                 <Link to="/blogs">Blog</Link>
               </li>
-              <li className="uppercase mx-5 text-white font-medium text-lg">
-                <a href="#contact">Contact</a>
-              </li> 
               <li className="uppercase mx-5 text-white font-medium text-lg">
                 <Link to="/faq" className="">F.A.Q</Link>
               </li>
@@ -48,19 +35,10 @@ const INavbar = () => {
                     <nav className="bm-item-list">
                       <ul className="flex flex-col">
                         <li onClick={()=> setNavbarOpen(false)} className="uppercase my-4 -ml-4 text-white font-medium text-lg">
-                          <a href="#">Service</a>
+                          <Link to="/blogs">Blog</Link>
                         </li> 
                         <li onClick={()=> setNavbarOpen(false)} className="uppercase my-4 -ml-4 text-white font-medium text-lg">
-                          <a href="#">Portfolio</a>
-                        </li> 
-                        <li onClick={()=> setNavbarOpen(false)} className="uppercase my-4 -ml-4 text-white font-medium text-lg">
-                          <a href="javascript:void">Blog</a>
-                        </li> 
-                        <li onClick={()=> setNavbarOpen(false)} className="uppercase my-4 -ml-4 text-white font-medium text-lg">
-                          <a href="#">Contact</a>
-                        </li> 
-                        <li onClick={()=> setNavbarOpen(false)} className="uppercase my-4 -ml-4 text-white font-medium text-lg">
-                          <a href="/faq" className="">F.A.Q</a>
+                          <Link href="/faq" className="">F.A.Q</Link>
                         </li>
                       </ul>
                     </nav>

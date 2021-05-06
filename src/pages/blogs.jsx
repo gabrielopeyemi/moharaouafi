@@ -3,7 +3,8 @@ import {ENavbar} from '../components/Navigation';
 import { Link, graphql} from 'gatsby';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
-import Layout from './../components/layout'
+import Layout from './../components/layout';
+import HeadOne from './../components/HeadOne';
 
 export default function Blogs({ data }) {
     console.log({MV: data.allMarkdownRemark.nodes[0].frontmatter.image.childImageSharp.fluid})
@@ -12,16 +13,7 @@ export default function Blogs({ data }) {
 
     return (
         <Layout>
-            <header className='w-full' style={{backgroundImage: 'linear-gradient(#7dce93, #59aa8a)'}}>
-                <ENavbar />
-                <div className="flex justify-center">
-                    <div className="flex flex-wrap items-center container my-10 mx-6 pt-4"> 
-                        <div className="w-full flex flex-col items-center text-center py-10">
-                            <h2 style={{lineHeight: 1.5}} className="my-2 text-white text-xl lg:text-3xl leading-10 uppercase bold lg:font-medium">Blogs</h2> 
-                        </div>
-                    </div>
-                </div>
-            </header>
+            <HeadOne Title='Blogs'/>
             <div className='container'>
                 <div className='row' style={{marginTop: '50px', marginBottom: '100px', justifyContent: 'center'}}>
                     {postsData.map((post)=>(

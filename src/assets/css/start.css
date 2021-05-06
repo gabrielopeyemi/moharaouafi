@@ -152,27 +152,12 @@
 .rec .rec-dot{
     color: rgb(97, 179, 140);
     background-color: #4b5563;
+    opacity: 0.5;
 }
 .rec .rec-carousel-item .rec-carousel-item-2 .rec-carousel-item-visible{
     margin: auto;
 }
-.addressz{
-    align-self: center;
-    left: 110px;
-    display: flex;
-    flex-direction: column;
-}
-.contact{
-    margin-bottom: 20px;
-}
-@media only screen and (max-width: 768px){
-    .addressz{
-        align-self: center;
-        left: 0;
-        display: flex;
-        flex-direction: column;
-    }
-}
+
 .wave {
     bottom: 0;
     left: 0;
@@ -199,5 +184,39 @@
     }
     100%{
         background-position-x: 1000px;
+    }
+}
+
+.addressz{
+    align-self: center;
+    left: 110px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact{
+    margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 768px){
+    .addressz{
+        align-self: center;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.address-bottom{
+    margin-top: 20px;
+    display: none;
+}
+
+@media only screen and (max-width: 767px) {
+    .address-bottom{
+        display: grid;
+    }
+    .address-left{
+        display: none;
     }
 }

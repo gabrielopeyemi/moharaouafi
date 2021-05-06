@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Img from 'gatsby-image';
 import {useStaticQuery, graphql} from 'gatsby';
+import styled from 'styled-components';
 
 export default function HeroTwo() {
     const data = useStaticQuery(graphql`
@@ -14,7 +15,34 @@ export default function HeroTwo() {
             }
         }
     `)
-    console.log({data})
+    console.log({data});
+    const [ showFullText, setShowFullText] = useState(true);
+    const [ showFullButton, setShowButton] = useState(false);
+    useEffect(()=>{
+        
+    },[]);
+    const handleTextToShow = () => {
+        if (window.innerWidth < 787 ){
+            setShowFullText(false);
+        } else setShowFullText(true);
+    }
+    window.addEventListener('resize', () => {
+        console.log({HN: window.innerWidth})
+        if (window.innerWidth < 787 ){
+            setShowFullText(false);
+            console.log({showFullText});
+            return
+        } 
+        if (window.innerWidth > 787){
+            setShowFullText(true);
+            console.log({showFullText});
+            return;
+        }
+    });
+    const handleShowFullText = ()=> {
+        setShowFullText(!showFullText);
+        setShowButton(!showFullButton);
+    }
     return ( 
         <section className="flex justify-center mt-10 lg:mt-36 lg:mb-20 mx-6">
         <div className="block container">
@@ -33,36 +61,65 @@ export default function HeroTwo() {
                         <h1 className="text-gray-600 text-2xl lg:text-6xl font-bold uppercase">MOHA RAOUAFI</h1> 
                         <span className="text-green-400 text-base lg:text-2xl font-semibold lg:ml-4 mt-2 text-primary">Nice, France</span>
                     </div> 
-                    <div className="block lg:hidden text-gray-500 text-lg font-light my-4">
+                    <ShortText 
+                        showFullText={showFullText} 
+                        style={{displace: showFullText ? 'none' : ''}}
+                    >
                         <p>
                             Graphiste Freelance basé dans les Alpes-Maritimes, je mets à disposition mon savoir-faire et ma créativité.
-                            <br/><br/>
+                            <br/>
+                            <br/>
                             Diplômé des arts appliqués en Design et Graphisme Print, je réalise tout projet nécessitant la création d'un environn...
                         </p> 
-                        <span>
-                            <a style={{color: '#59aa8a'}} href="#" id="readmore">
-                                Lire plus
-                            </a> 
-                            <a href="#" id="readmore" style={{display: 'none'}}>
-                                Lire moins
-                            </a>
+                        <span 
+                            style={{color: '#59aa8a', cursor: 'pointer'}} 
+                            onClick={handleShowFullText}
+                        >
+                            Lire plus
                         </span>
-                    </div> 
-                    <p className="hidden lg:block text-gray-500 text-lg font-light my-4">
-                            Graphiste Freelance basé dans les Alpes-Maritimes, je mets à disposition mon savoir-faire et ma créativité.
-                    </p> 
-                    <p className="hidden lg:block text-gray-500 text-lg font-light my-4">
-                        Diplômé des arts appliqués en Design et Graphisme Print, je réalise tout projet nécessitant la création d'un environnement graphique. Allant du simple logo aux grands formats (expo, stand, enseigne...) en passant par le web-design.
-                    </p> 
-                    <p className="hidden lg:block text-gray-500 text-lg font-light my-4">
-                        Chaque projet est une création unique, en lien avec vos valeurs et votre activité, adapté à vos besoins en communication. Afin d’affiner votre demande, je suis en étroite collaboration avec des prestataires techniques tels que développeurs web, photographes professionnels, illustrateur.
-                    </p> 
-                    <p className="hidden lg:block text-gray-500 text-lg font-light my-4">
-                        Outre la créativité, ma rigueur et ma réactivité sont également les atouts nécessaires à la bonne gestion d'un projet, du Brief client autour d’un café à la finalisation.
-                    </p>
+                    </ShortText>
+                    <FullText 
+                        showFullText={showFullText} 
+                        style={{displace: showFullText ? '' : 'none'}}
+                    >
+                        <p className="text-gray-500 text-lg font-light my-4">
+                                Graphiste Freelance basé dans les Alpes-Maritimes, je mets à disposition mon savoir-faire et ma créativité.
+                        </p> 
+                        <p className="text-gray-500 text-lg font-light my-4">
+                            Diplômé des arts appliqués en Design et Graphisme Print, je réalise tout projet nécessitant la création d'un environnement graphique. Allant du simple logo aux grands formats (expo, stand, enseigne...) en passant par le web-design.
+                        </p> 
+                        <p className="text-gray-500 text-lg font-light my-4">
+                            Chaque projet est une création unique, en lien avec vos valeurs et votre activité, adapté à vos besoins en communication. Afin d’affiner votre demande, je suis en étroite collaboration avec des prestataires techniques tels que développeurs web, photographes professionnels, illustrateur.
+                        </p> 
+                        <p className="text-gray-500 text-lg font-light my-4">
+                            Outre la créativité, ma rigueur et ma réactivité sont également les atouts nécessaires à la bonne gestion d'un projet, du Brief client autour d’un café à la finalisation.
+                        </p>
+                        <span 
+                            style={{display: showFullButton ? '': 'none', color: "#59aa8a", cursor: 'pointer'}} 
+                            onClick={handleShowFullText}
+                        >
+                            Lire moins
+                        </span>
+                    </FullText>
                 </div>
             </div>
         </div>
     </section>
     )
 }
+
+const FullText = styled.div`
+    display: ${(p) => p.showFullText ?  '' : 'none'};
+    animation: 6s;
+`;
+
+const ShortText = styled.div`
+    display: ${(p) => p.showFullText ? 'none' : 'block'};
+    /* @media only screen and (max-width: 767px){
+        display: none !important;
+    } */
+`;
+
+const Span = styled.span`
+    p
+`;

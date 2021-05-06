@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import Carousel from 'react-elastic-carousel';
+import styled from 'styled-components';
 
 //import logo images
 import CashArcadeOne from './../../assets/Image/LogoClients/CashArcade/CashArcadeOne.png';
@@ -62,17 +63,21 @@ export default function HeroFive() {
                 itemPadding={[10, 50]}
                 breakPoints={breakPoints}
               >
-                <img maxWidth="50%" className="" onFocus={ () => void 0 } onMouseOver={()=> setImageOne(CashArcadeTwo)} onMouseLeave={()=> setImageOne(CashArcadeOne)} src={imageOne} alt={imageOne}/>
-                <img maxWidth="50%" className="" onFocus={ () => void 0 } onMouseOver={()=> setImageDEBS(DEBSTwo)} onMouseLeave={()=> setImageDEBS(DEBSOne)} src={imageDEBS} alt={imageDEBS}/>
-                <img maxWidth="50%" className="" onFocus={ () => void 0 } onMouseOver={()=> setImagfruiteo(fruiteoTwo)} onMouseLeave={()=> setImagfruiteo(fruiteoOne)} src={imagefruiteo} alt={imagefruiteo}/>
-                <img maxWidth="50%" className="" onFocus={ () => void 0 } onMouseOver={()=> setImageSauceSissi(SauceSissiTwo)} onMouseLeave={()=> setImageSauceSissi(SauceSissiOne)} src={imageSauceSissi} alt={imageSauceSissi}/>
-                <img maxWidth="50%" className="" onFocus={ () => void 0 } onMouseOver={()=> setImageVictoriaInfinity(VictoriaInfinityTwo)} onMouseLeave={()=> setImageVictoriaInfinity(VictoriaInfinityOne)} src={imageVictoriaInfinity} alt={imageVictoriaInfinity}/>
-                <img maxWidth="50%" className="" onFocus={ () => void 0 } onMouseOver={()=> setImageLaxess(LaxessTwo)} onMouseLeave={()=> setImageLaxess(LaxessOne)} src={imageLaxess} alt={imageLaxess}/>
-                <img maxWidth="50%" className="" onFocus={ () => void 0 } onMouseOver={()=> setImagecfdt(cfdtTwo)} onMouseLeave={()=> setImagecfdt(cfdtOne)} src={imagecfdt} alt={imagecfdt}/>
-                <img maxWidth="50%" className="" onFocus={ () => void 0 } onMouseOver={()=> setImageenvibus(envibusTwo)} onMouseLeave={()=> setImageenvibus(envibusOne)} src={imageenvibus} alt={imageenvibus}/>
+                <Img maxWidth="10%" className="" onFocus={ () => void 0 } onMouseOver={()=> setImageOne(CashArcadeTwo)} onMouseLeave={()=> setImageOne(CashArcadeOne)} src={imageOne} alt={imageOne}/>
+                <Img maxWidth="10%" className="" onFocus={ () => void 0 } onMouseOver={()=> setImageDEBS(DEBSTwo)} onMouseLeave={()=> setImageDEBS(DEBSOne)} src={imageDEBS} alt={imageDEBS}/>
+                <Img maxWidth="10%" className="" onFocus={ () => void 0 } onMouseOver={()=> setImagfruiteo(fruiteoTwo)} onMouseLeave={()=> setImagfruiteo(fruiteoOne)} src={imagefruiteo} alt={imagefruiteo}/>
+                <Img maxWidth="10%" className="" onFocus={ () => void 0 } onMouseOver={()=> setImageSauceSissi(SauceSissiTwo)} onMouseLeave={()=> setImageSauceSissi(SauceSissiOne)} src={imageSauceSissi} alt={imageSauceSissi}/>
+                <Img maxWidth="10%" className="" onFocus={ () => void 0 } onMouseOver={()=> setImageVictoriaInfinity(VictoriaInfinityTwo)} onMouseLeave={()=> setImageVictoriaInfinity(VictoriaInfinityOne)} src={imageVictoriaInfinity} alt={imageVictoriaInfinity}/>
+                <Img maxWidth="10%" className="" onFocus={ () => void 0 } onMouseOver={()=> setImageLaxess(LaxessTwo)} onMouseLeave={()=> setImageLaxess(LaxessOne)} src={imageLaxess} alt={imageLaxess}/>
+                <Img maxWidth="10%" className="" onFocus={ () => void 0 } onMouseOver={()=> setImagecfdt(cfdtTwo)} onMouseLeave={()=> setImagecfdt(cfdtOne)} src={imagecfdt} alt={imagecfdt}/>
+                <Img maxWidth="10%" className="" onFocus={ () => void 0 } onMouseOver={()=> setImageenvibus(envibusTwo)} onMouseLeave={()=> setImageenvibus(envibusOne)} src={imageenvibus} alt={imageenvibus}/>
               </Carousel> 
           </div>
       </div>
   </section>
   );
 };
+
+const Img = styled.img`
+    width: 100px;
+`;

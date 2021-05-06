@@ -10,7 +10,6 @@ import { StaticQuery, graphql } from "gatsby"
 // import '../styles/css/style.css';
 import '../styles/css/style.min.css';
 import '../styles/css/style.css';
-// import '../styles/scss/style.scss';
 import '../styles/css/owl.theme.css';
 import '../styles/css/owl.carousel.css';
 import '../styles/css/main.css';

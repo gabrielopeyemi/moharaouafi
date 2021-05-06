@@ -2,21 +2,13 @@ import React, { Component } from "react";
 import { Accordion, Card } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {ENavbar} from "../components/Navigation";
-import Layout from './../components/layout'
+import HeadOne from './../components/HeadOne';
+import Layout from './../components/layout';
 export class FAQ extends Component {
     render() {
         return (
             <Layout>
-                <header className='w-full' style={{backgroundImage: 'linear-gradient(#7dce93, #59aa8a)'}}>
-                    <ENavbar />
-                    <div class="flex justify-center">
-                        <div class="flex flex-wrap items-center container my-10 mx-6 pt-4"> 
-                            <div class="w-full flex flex-col items-center text-center py-10">
-                                <h2 style={{lineHeight: 1.5}} class="my-2 text-white text-xl lg:text-3xl leading-10 uppercase font-medium lg:font-medium">Foire aux questions</h2> 
-                            </div>
-                        </div>
-                    </div>
-                </header>
+                <HeadOne Title='FOIRE AUX QUESTION'/>
                 <div className='justify-center mt-10 lg:mt-36 lg:mb-20 mx-6'>
                     <div className='block container'>
                         <AccordionDiv />

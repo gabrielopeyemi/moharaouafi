@@ -38,7 +38,7 @@ export default function HeroEight() {
     // https://moharaouafi.fr/wp-json/wp/v2/posts
   return (
     <section className="flex justify-center mt-10 lg:mt-36 lg:mb-20 mx-6">
-        <div class="absolute w-illustration" style={{left: '-180px', zIndex: -1000, marginBottom: '100px'}}>
+        <div class="absolute w-illustration" style={{left: '-180px', zIndex: -1000, marginBottom: '100px', marginTop: '100px'}}>
             <img src={BG} alt="illustration" style={{zIndex: -1000}}/>
         </div>
         <div className="block container">
@@ -58,7 +58,7 @@ export default function HeroEight() {
                             {content}
                         </p>
                         <Profile>
-                            <Img src={img} alt={img} />
+                            {/* <Img src={img} alt={img} /> */}
                             <About>
                                 <H2>{name}</H2>
                                 <Span>{project}</Span>
@@ -74,7 +74,7 @@ export default function HeroEight() {
   );
 }
 const Card = styled.div`
-    margin: 20px;
+    /* margin: 20px; */
     padding: 20px;
     background-color: #e3e3e3;
     border-radius: 10px;
@@ -82,6 +82,7 @@ const Card = styled.div`
 `;
 
 const Profile = styled.div`
+    margin-top: 10px;
     display: flex;
     align-items: center;
 `;

@@ -1,6 +1,7 @@
 import React from 'react';
 import IMG from './../../assets/Image/Contact/plane.png'
-import SectionHeader from './../SectionHeader'
+import SectionHeader from './../SectionHeader';
+import Address from './../Address';
 import "./../../assets/css/tailwind.css";
 
 export default function HeroTen() {
@@ -16,28 +17,12 @@ export default function HeroTen() {
                 <div style={{marginTop: 40, marginBottom: 40}}>
                     <div className='row'>
                         <div className='col-md-6 col-lg-4 addressz' style={{alignSelf: 'center'}}>
-                            <div className="text-primary contact">
-                                <div className="flex flex-col">
-                                    <div>
-                                        <h1 className="uppercase font-bold">Email:</h1> 
-                                        <span className="font-light">Contact@Moharaouafi.fr</span>
-                                    </div> 
-                                    <div>
-                                        <h1 className="uppercase font-bold">Téléphone:</h1> 
-                                        <span>06.26.52.02.09</span>
-                                    </div>
-                                </div>
+                            <div className="address-left">
+                                <Address />
                             </div>
-                            <br />
-                            <div className="text-primary">
-                                <h1 className="uppercase font-bold">Address:</h1> 
-                                <span>12 Boulevard de Cessole Nice</span> <br/>
-                                <span>Provence-Alpes-Côte d'Azur</span>  <br/>
-                                <span>06000 Nice</span>
-                            </div> 
                         </div>
                         <div className='col-md-6 col-lg-4'>
-                            <h2 className="text-gray-600 text-2xl font-light text-center mb-10">Contactez-moi</h2> 
+                            <h2 style={{fontWeight: 700}} className="text-gray-600 text-2xl font-light text-center mb-10">Contactez-moi</h2> 
                             <div>
                                 <div className="rounded-lg space-y-4 lg:w-contact-form">
                                     <div>
@@ -45,7 +30,7 @@ export default function HeroTen() {
                                         <input id="name" name="name" type="text" required="required" placeholder="Nom" className="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-green-500 focus:border-green-500 focus:z-10 sm:text-sm"/>
                                     </div> 
                                     <div>
-                                        <label className="sr-only">Email address</label> 
+                                        <label className="sr-only">E-mail adresse</label> 
                                         <input id="email-address" name="email" type="email" autocomplete="email" required="required" placeholder="Email address" className="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-green-500 focus:border-green-500 focus:z-10 sm:text-sm"/>
                                     </div> 
                                     <div>
@@ -64,6 +49,9 @@ export default function HeroTen() {
                         <div className='col-md-6 col-lg-4'  style={{alignSelf: 'center'}}>
                             <div className="hidden lg:block lg:ml-20 mt-10 lg:mt-0">
                                 <img src={IMG} alt="submit" className="w-40 lg:w-60"/>
+                            </div>
+                            <div className="address-bottom" >
+                                <Address />
                             </div>
                         </div>
                     </div>

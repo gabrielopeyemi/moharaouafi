@@ -1,52 +1,31 @@
+import { useStaticQuery, graphql } from 'gatsby';
 import React from 'react';
-
-import ServiceCard from './../ServiceCard';
-import one from './../../images/img/services/1.png';
-import two from './../../images/img/services/2.png';
-import three from './../../images/img/services/3.png';
-import four from './../../images/img/services/4.png';
-import five from './../../images/img/services/5.png';
-import six from './../../images/img/services/6.png';
+import styled from 'styled-components';
+import Img from 'gatsby-image';
 
 export default function HeroThree() {
-  const Data = [
-      {
-        id: 1,
-      name: 'IDENTITÉ VISUELLE',
-      desc: 'Nous élaborons ensemble votre nouvelle image ou une refonte de votre marque qui serait originale et attirante : Logotype, charte graphique…',
-      image: one,
-    },
-    {
-      id: 2,
-    name: 'WEBDESIGN',
-    desc: `Conception graphique d'interface de site internet : site vitrine, site e-commerce, bannière, newsletter, signature mail…`,
-    image: two,
-    },
-    {
-      id: 3,
-    name: 'ÉDITION ET PRINT',
-    desc: `Votre identité créée et déclinée pour l'édition, un message clair et engageant : brochure, flyers, carte de visite, affiche, papeterie…`,
-    image: three,
-    },
-    {
-      id: 4,
-    name: 'IMPRESSION',
-    desc: `Je pourrais mettre ma passion pour le "Print" à votre service afin de suivre vos documents jusqu'à l'impression et m'assurer de leur qualité.`,
-    image: four,
-    },
-    {
-      id: 5,
-    name: 'ILLUSTRATION',
-    desc: `Je prends en main votre demande d'illustration de A à Z, je réalise des illustrations graphiques pour ajouter du piment à vos projets.`,
-    image: five
-    },
-    {
-      id: 6,
-    name: 'FORMATION',
-    desc: `Formation possible entre autres des logiciels suivants : Adobe Photoshop, Adobe Illustrator, Adobe XD, Adobe InDesign..`,
-    image: six
-    },
-  ];
+  const data = useStaticQuery(graphql`
+    query Services {
+      allMarkdownRemark(filter: {frontmatter: {group: {eq: "Service"}}}) {
+        nodes {
+          frontmatter {
+            Name
+            group
+            slug
+            about
+            image {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        }
+      }
+    }     
+  `)
+  const Data = data.allMarkdownRemark.nodes;
   return (
     <section className="flex justify-center mt-10 lg:mt-36 lg:mb-20 mx-6">
         <div className="block container">
@@ -57,13 +36,68 @@ export default function HeroThree() {
                 </span>
             </div>
             <div className="flex flex-wrap items-center my-10 lg:my-20">
-              <div className='row'>
+              {/* <div className='row'>
                 {Data.map((data, i)=>(
-                  <ServiceCard data={data} key={i}/>
+                  <ServiceCard data={data} key={i}/> 
                 ))}
-              </div>
+              </div> */}
+              <CardWarp>
+                        {Data.map((post)=>(
+                            <CardItem>
+                                <div>
+                                  <Img style={{width: '100%'}} fluid={post.frontmatter.image.childImageSharp.fluid} />
+                                    <div className="card-body">
+                                        <H3 className="card-title">{post.frontmatter.Name}</H3>
+                                        <p className="card-text">{post.frontmatter.about}</p>
+                                     </div>
+                                </div>
+                            </CardItem>
+                        ))}
+                    </CardWarp>
             </div>
         </div>
     </section>
   );
 };
+
+
+const CardWarp = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+`;
+
+const CardItem = styled.div`
+    width: 32%;
+    min-height: 18rem;
+    padding: 30px;
+    margin: 5px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    @media only screen and (max-width: 768px){
+        width: 49%
+    };
+    @media only screen and (max-width: 524px){
+        width: 100%;
+    }
+    &:hover{
+      border: 1px solid grey;
+    }
+`;
+
+const CardInner = styled.div`
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 30px 200px;
+    width: 100%;
+`;
+
+const H3 = styled.h3`
+    text-transform: uppercase;
+    margin-top: 2rem;
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+`;

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image';
 import styled from 'styled-components';
@@ -20,14 +20,14 @@ export default function HeroSix() {
               slug
               imageMobile {
                 childImageSharp {
-                  fluid {
+                  fluid (maxWidth: 300 quality: 90) {
                     ...GatsbyImageSharpFluid
                   }
                 }
               }
               imagePC {
                 childImageSharp {
-                  fluid (maxWidth: 300 quality: 90) {
+                  fluid (maxWidth: 300 quality: 100) {
                     ...GatsbyImageSharpFluid
                   }
                 }
@@ -55,6 +55,27 @@ export default function HeroSix() {
       const [show7, setShow7] = useState(false);
       const [show8, setShow8] = useState(false);
       const [show0, setShow0] = useState(false);
+      //check mobile or PC
+      const [ webView, setWebView ] = useState(true);
+      useEffect(()=>{
+        if (window.innerWidth < 414){
+          setWebView(false);
+          return;
+        };
+        if (window.innerWidth > 414){
+          setWebView(true)
+        };
+      },[]);
+      window.addEventListener('resize', () => {
+        console.log({HN: window.innerWidth})
+        if (window.innerWidth < 414 ){
+            setWebView(false)
+            return
+        } 
+        if (window.innerWidth > 414){
+            setWebView(false)
+        }
+    });
   return (
     <>
         <section className="flex justify-center mx-6 sm:mt-10 lg:mt-40">
@@ -119,12 +140,13 @@ export default function HeroSix() {
         <Modal show={show0}>
           <ModelHead>
             <Title>
-              hello
+            {Galleries[0].frontmatter.Name}
             </Title>
             <TimesIcons onClick={()=> setShow0(!show0)}/>
           </ModelHead>
           <Modal.Body>
-            <Img style={{width: '100%'}} fluid={Galleries[0].frontmatter.imagePC.childImageSharp.fluid} />
+            <Img style={{width: '100%', display: webView ? "" : "none"}} fluid={Galleries[0].frontmatter.imagePC.childImageSharp.fluid} />
+            <Img style={{width: '100%', display: webView ? "none" : ""}} fluid={Galleries[0].frontmatter.imageMobile.childImageSharp.fluid} />
           </Modal.Body>
       </Modal>
         
@@ -132,12 +154,13 @@ export default function HeroSix() {
         <Modal show={show1}>
           <ModelHead>
             <Title>
-            {Galleries[0].frontmatter.Name}
+            {Galleries[1].frontmatter.Name}
             </Title>
             <TimesIcons onClick={()=> setShow1(!show1)}/>
           </ModelHead>
           <Modal.Body>
-            <Img style={{width: '100%'}} fluid={Galleries[1].frontmatter.imagePC.childImageSharp.fluid} />
+            <Img style={{width: '100%', display: webView ? "" : "none"}} fluid={Galleries[1].frontmatter.imagePC.childImageSharp.fluid} />
+            <Img style={{width: '100%', display: webView ? "none" : ""}} fluid={Galleries[1].frontmatter.imageMobile.childImageSharp.fluid} />
           </Modal.Body>
       </Modal>
         
@@ -150,7 +173,8 @@ export default function HeroSix() {
             <TimesIcons onClick={()=> setShow2(!show2)}/>
           </ModelHead>
           <Modal.Body>
-            <Img style={{width: '100%'}} fluid={Galleries[2].frontmatter.imagePC.childImageSharp.fluid} />
+            <Img style={{width: '100%', display: webView ? "" : "none"}} fluid={Galleries[2].frontmatter.imagePC.childImageSharp.fluid} />
+            <Img style={{width: '100%', display: webView ? "none" : ""}} fluid={Galleries[2].frontmatter.imageMobile.childImageSharp.fluid} />
           </Modal.Body>
       </Modal>
         
@@ -163,7 +187,8 @@ export default function HeroSix() {
             <TimesIcons onClick={()=> setShow3(!show3)}/>
           </ModelHead>
           <Modal.Body>
-            <Img style={{width: '100%'}} fluid={Galleries[3].frontmatter.imagePC.childImageSharp.fluid} />
+            <Img style={{width: '100%', display: webView ? "" : "none"}} fluid={Galleries[3].frontmatter.imagePC.childImageSharp.fluid} />
+            <Img style={{width: '100%', display: webView ? "none" : ""}} fluid={Galleries[3].frontmatter.imageMobile.childImageSharp.fluid} />
           </Modal.Body>
       </Modal>
         
@@ -176,7 +201,8 @@ export default function HeroSix() {
             <TimesIcons onClick={()=> setShow4(!show4)}/>
           </ModelHead>
           <Modal.Body>
-            <Img style={{width: '100%'}} fluid={Galleries[4].frontmatter.imagePC.childImageSharp.fluid} />
+            <Img style={{width: '100%', display: webView ? "" : "none"}} fluid={Galleries[4].frontmatter.imagePC.childImageSharp.fluid} />
+            <Img style={{width: '100%', display: webView ? "none" : ""}} fluid={Galleries[4].frontmatter.imageMobile.childImageSharp.fluid} />
           </Modal.Body>
       </Modal>
         
@@ -189,7 +215,8 @@ export default function HeroSix() {
             <TimesIcons onClick={()=> setShow5(!show5)}/>
           </ModelHead>
           <Modal.Body>
-            <Img style={{width: '100%'}} fluid={Galleries[5].frontmatter.imagePC.childImageSharp.fluid} />
+            <Img style={{width: '100%', display: webView ? "" : "none"}} fluid={Galleries[5].frontmatter.imagePC.childImageSharp.fluid} />
+            <Img style={{width: '100%', display: webView ? "none" : ""}} fluid={Galleries[5].frontmatter.imageMobile.childImageSharp.fluid} />
           </Modal.Body>
       </Modal>
         
@@ -202,7 +229,8 @@ export default function HeroSix() {
             <TimesIcons onClick={()=> setShow6(!show6)}/>
           </ModelHead>
           <Modal.Body>
-            <Img style={{width: '100%'}} fluid={Galleries[6].frontmatter.imagePC.childImageSharp.fluid} />
+            <Img style={{width: '100%', display: webView ? "" : "none"}} fluid={Galleries[6].frontmatter.imagePC.childImageSharp.fluid} />
+            <Img style={{width: '100%', display: webView ? "none" : ""}} fluid={Galleries[6].frontmatter.imageMobile.childImageSharp.fluid} />
           </Modal.Body>
       </Modal>
         
@@ -215,7 +243,8 @@ export default function HeroSix() {
             <TimesIcons onClick={()=> setShow7(!show7)}/>
           </ModelHead>
           <Modal.Body>
-            <Img style={{width: '100%'}} fluid={Galleries[7].frontmatter.imagePC.childImageSharp.fluid} />
+            <Img style={{width: '100%', display: webView ? "" : "none"}} fluid={Galleries[7].frontmatter.imagePC.childImageSharp.fluid} />
+            <Img style={{width: '100%', display: webView ? "none" : ""}} fluid={Galleries[7].frontmatter.imageMobile.childImageSharp.fluid} />
           </Modal.Body>
       </Modal>
         
@@ -228,7 +257,8 @@ export default function HeroSix() {
             <TimesIcons onClick={()=> setShow8(!show8)}/>
           </ModelHead>
           <Modal.Body>
-            <Img style={{width: '100%'}} fluid={Galleries[8].frontmatter.imagePC.childImageSharp.fluid} />
+            <Img style={{width: '100%', display: webView ? "" : "none"}} fluid={Galleries[8].frontmatter.imagePC.childImageSharp.fluid} />
+            <Img style={{width: '100%', display: webView ? "none" : ""}} fluid={Galleries[8].frontmatter.imageMobile.childImageSharp.fluid} />
           </Modal.Body>
       </Modal>
     </>

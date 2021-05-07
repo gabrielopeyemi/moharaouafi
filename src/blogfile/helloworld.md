@@ -2,7 +2,7 @@
 title: test blog post
 stack: Real deal
 slug: This-is-how-to-really-say-hello 
-date: 2021-01-02T00:00: 00+00:00
+date: 2021-01-02T00:00:00+00:00
 image: ../assets/Image/blog/postTwo.jpg 
 ---
 

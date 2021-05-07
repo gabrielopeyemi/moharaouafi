@@ -60,7 +60,7 @@ export default function HeroSix() {
         <section className="flex justify-center mx-6 sm:mt-10 lg:mt-40">
            <div className="block container">
                <div className="w-full flex flex-col lg:flex-row items-baseline mb-10">
-                   <h1 className="text-gray-600 text-2xl lg:text-6xl font-bold uppercase">Mes réalisations</h1> 
+                   <h1 className="text-gray-600 text-2xl lg:text-6xl font-bold uppercase">Mes réalisations</h1>  
                    <span className="text-base lg:text-2xl font-semibold lg:ml-4 mt-2 text-primary"></span>
                 </div> 
                 <div className="flex flex-wrap justify-between w-full mt-10 lg:my-8">
@@ -116,7 +116,7 @@ export default function HeroSix() {
         </section>
         
         {/* Modal 0 */}
-        <Modal show={show0}>
+        <Modal show={show0} style={{width: '80%'}}>
           <ModelHead>
             <Title>
               hello
@@ -124,7 +124,7 @@ export default function HeroSix() {
             <TimesIcons onClick={()=> setShow0(!show0)}/>
           </ModelHead>
           <Modal.Body>
-            <Img style={{width: '100%'}} fluid={Galleries[0].frontmatter.image.childImageSharp.fluid} />
+            <Img style={{width: '100%'}} fluid={Galleries[0].frontmatter.imagePC .childImageSharp.fluid} />
           </Modal.Body>
       </Modal>
         

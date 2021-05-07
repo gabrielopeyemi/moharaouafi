@@ -82,7 +82,7 @@ const CardItem = styled.div`
         width: 100%;
     }
     &:hover{
-      border: 1px solid grey;
+      border: 1px solid #ccc;
     }
 `;
 

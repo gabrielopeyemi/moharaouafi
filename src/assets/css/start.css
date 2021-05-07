@@ -220,3 +220,25 @@
         display: none;
     }
 }
+
+.modal-dialog {
+    max-width: 100% !important;
+    margin: auto !important;
+    width: 100% !important;
+    background-color: #0000;
+    background: transparent;
+}  
+
+.modal{
+    padding-left: 0 !important;
+    background-color: #0F2829;
+    background: transparent;
+}
+
+.modal-content{
+    background: #000000ab;
+}
+.modal-body {
+    padding: 3rem;
+
+}

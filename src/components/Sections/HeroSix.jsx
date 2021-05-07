@@ -140,7 +140,6 @@ export default function HeroSix() {
         <Modal show={show0}>
           <ModelHead>
             <Title>
-            {Galleries[0].frontmatter.Name}
             </Title>
             <TimesIcons onClick={()=> setShow0(!show0)}/>
           </ModelHead>
@@ -154,7 +153,6 @@ export default function HeroSix() {
         <Modal show={show1}>
           <ModelHead>
             <Title>
-            {Galleries[1].frontmatter.Name}
             </Title>
             <TimesIcons onClick={()=> setShow1(!show1)}/>
           </ModelHead>
@@ -168,7 +166,6 @@ export default function HeroSix() {
         <Modal show={show2}>
           <ModelHead>
             <Title>
-            {Galleries[2].frontmatter.Name}
             </Title>
             <TimesIcons onClick={()=> setShow2(!show2)}/>
           </ModelHead>
@@ -182,7 +179,6 @@ export default function HeroSix() {
         <Modal show={show3}>
           <ModelHead>
             <Title>
-            {Galleries[3].frontmatter.Name}
             </Title>
             <TimesIcons onClick={()=> setShow3(!show3)}/>
           </ModelHead>
@@ -196,7 +192,6 @@ export default function HeroSix() {
         <Modal show={show4}>
           <ModelHead>
             <Title>
-            {Galleries[4].frontmatter.Name}
             </Title>
             <TimesIcons onClick={()=> setShow4(!show4)}/>
           </ModelHead>
@@ -210,7 +205,6 @@ export default function HeroSix() {
         <Modal show={show5}>
           <ModelHead>
             <Title>
-              {Galleries[5].frontmatter.Name}
             </Title>
             <TimesIcons onClick={()=> setShow5(!show5)}/>
           </ModelHead>
@@ -224,7 +218,6 @@ export default function HeroSix() {
         <Modal show={show6}>
           <ModelHead>
             <Title>
-            {Galleries[6].frontmatter.Name}
             </Title>
             <TimesIcons onClick={()=> setShow6(!show6)}/>
           </ModelHead>
@@ -238,7 +231,6 @@ export default function HeroSix() {
         <Modal show={show7}>
           <ModelHead>
             <Title>
-            {Galleries[7].frontmatter.Name}
             </Title>
             <TimesIcons onClick={()=> setShow7(!show7)}/>
           </ModelHead>
@@ -252,7 +244,6 @@ export default function HeroSix() {
         <Modal show={show8}>
           <ModelHead>
             <Title>
-            {Galleries[8].frontmatter.Name}
             </Title>
             <TimesIcons onClick={()=> setShow8(!show8)}/>
           </ModelHead>

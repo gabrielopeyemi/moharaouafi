@@ -220,3 +220,17 @@
         display: none;
     }
 }
+.modal{
+    padding: 0px !important;
+}
+.modal-dialog {
+    max-width: 100% !important;
+    margin: auto;
+    width: 100%;
+    padding: 10px 80px 20px 80px;
+    background-color: #fff;
+}
+
+.modal-content{
+    border: 0px;
+}

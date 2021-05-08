@@ -27,7 +27,7 @@ export default function HeroSix() {
               }
               imagePC {
                 childImageSharp {
-                  fluid {
+                  fluid (quality: 100, maxWidth: 1000) {
                     ...GatsbyImageSharpFluid
                   }
                 }
@@ -117,15 +117,15 @@ export default function HeroSix() {
         
         {/* Modal 0 */}
         <Modal show={show0}>
-          <ModelHead>
+          <div>
             <Title>
               hello
             </Title>
             <TimesIcons onClick={()=> setShow0(!show0)}/>
-          </ModelHead>
-          <Modal.Body>
-            <Img style={{width: '100%'}} fluid={Galleries[0].frontmatter.image.childImageSharp.fluid} />
-          </Modal.Body>
+          </div>
+          <div>
+            <Img style={{width: '100%'}} fluid={Galleries[0].frontmatter.imagePC.childImageSharp.fluid} />
+          </div>
       </Modal>
         
         {/* Modal 1 */}
@@ -137,7 +137,7 @@ export default function HeroSix() {
             <TimesIcons onClick={()=> setShow1(!show1)}/>
           </ModelHead>
           <Modal.Body>
-            <Img style={{width: '100%'}} fluid={Galleries[1].frontmatter.image.childImageSharp.fluid} />
+            <Img style={{width: '100%'}} fluid={Galleries[1].frontmatter.imagePC.childImageSharp.fluid} />
           </Modal.Body>
       </Modal>
         
@@ -150,7 +150,7 @@ export default function HeroSix() {
             <TimesIcons onClick={()=> setShow2(!show2)}/>
           </ModelHead>
           <Modal.Body>
-            <Img style={{width: '100%'}} fluid={Galleries[2].frontmatter.image.childImageSharp.fluid} />
+            <Img style={{width: '100%'}} fluid={Galleries[2].frontmatter.imagePC.childImageSharp.fluid} />
           </Modal.Body>
       </Modal>
         
@@ -163,7 +163,7 @@ export default function HeroSix() {
             <TimesIcons onClick={()=> setShow3(!show3)}/>
           </ModelHead>
           <Modal.Body>
-            <Img style={{width: '100%'}} fluid={Galleries[3].frontmatter.image.childImageSharp.fluid} />
+            <Img style={{width: '100%'}} fluid={Galleries[3].frontmatter.imagePC.childImageSharp.fluid} />
           </Modal.Body>
       </Modal>
         
@@ -176,7 +176,7 @@ export default function HeroSix() {
             <TimesIcons onClick={()=> setShow4(!show4)}/>
           </ModelHead>
           <Modal.Body>
-            <Img style={{width: '100%'}} fluid={Galleries[4].frontmatter.image.childImageSharp.fluid} />
+            <Img style={{width: '100%'}} fluid={Galleries[4].frontmatter.imagePC.childImageSharp.fluid} />
           </Modal.Body>
       </Modal>
         
@@ -189,7 +189,7 @@ export default function HeroSix() {
             <TimesIcons onClick={()=> setShow5(!show5)}/>
           </ModelHead>
           <Modal.Body>
-            <Img style={{width: '100%'}} fluid={Galleries[5].frontmatter.image.childImageSharp.fluid} />
+            <Img style={{width: '100%'}} fluid={Galleries[5].frontmatter.imagePC.childImageSharp.fluid} />
           </Modal.Body>
       </Modal>
         
@@ -202,7 +202,7 @@ export default function HeroSix() {
             <TimesIcons onClick={()=> setShow6(!show6)}/>
           </ModelHead>
           <Modal.Body>
-            <Img style={{width: '100%'}} fluid={Galleries[6].frontmatter.image.childImageSharp.fluid} />
+            <Img style={{width: '100%'}} fluid={Galleries[6].frontmatter.imagePC.childImageSharp.fluid} />
           </Modal.Body>
       </Modal>
         
@@ -215,7 +215,7 @@ export default function HeroSix() {
             <TimesIcons onClick={()=> setShow7(!show7)}/>
           </ModelHead>
           <Modal.Body>
-            <Img style={{width: '100%'}} fluid={Galleries[7].frontmatter.image.childImageSharp.fluid} />
+            <Img style={{width: '100%'}} fluid={Galleries[7].frontmatter.imagePC.childImageSharp.fluid} />
           </Modal.Body>
       </Modal>
         
@@ -228,7 +228,7 @@ export default function HeroSix() {
             <TimesIcons onClick={()=> setShow8(!show8)}/>
           </ModelHead>
           <Modal.Body>
-            <Img style={{width: '100%'}} fluid={Galleries[8].frontmatter.image.childImageSharp.fluid} />
+            <Img style={{width: '100%'}} fluid={Galleries[8].frontmatter.imagePC.childImageSharp.fluid} />
           </Modal.Body>
       </Modal>
     </>

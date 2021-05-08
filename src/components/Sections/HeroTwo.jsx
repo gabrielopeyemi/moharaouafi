@@ -5,7 +5,7 @@ import styled from 'styled-components';
 
 export default function HeroTwo() {
     const data = useStaticQuery(graphql`
-        query imgfisrt {
+        query imgAslan {
             file(relativePath: {eq: "Picture-profil.png"}) {
                 childImageSharp {
                     fluid {
@@ -21,28 +21,26 @@ export default function HeroTwo() {
     useEffect(()=>{
         
     },[]);
-    const handleTextToShow = () => {
-        if (window.innerWidth < 787 ){
-            setShowFullText(false);
-        } else setShowFullText(true);
-    }
-    window.addEventListener('resize', () => {
-        console.log({HN: window.innerWidth})
-        if (window.innerWidth < 787 ){
-            setShowFullText(false);
-            console.log({showFullText});
-            return
-        } 
-        if (window.innerWidth > 787){
-            setShowFullText(true);
-            console.log({showFullText});
-            return;
-        }
-    });
+    useEffect(() => {
+        window.addEventListener('resize', () => {
+            console.log({HN: window.innerWidth})
+            if (window.innerWidth < 787 ){
+                setShowFullText(false);
+                console.log({showFullText});
+                return
+            } 
+            if (window.innerWidth > 787){
+                setShowFullText(true);
+                console.log({showFullText});
+                return;
+            }
+        });
+    },[])
     const handleShowFullText = ()=> {
         setShowFullText(!showFullText);
         setShowButton(!showFullButton);
     }
+    const { fluid } = data.file.childImageSharp;
     return ( 
         <section className="flex justify-center mt-10 lg:mt-36 lg:mb-20 mx-6">
         <div className="block container">
@@ -54,7 +52,7 @@ export default function HeroTwo() {
             </div>
             <div className="flex flex-wrap items-center my-10 lg:my-20">
                 <div className="w-full flex justify-center lg:w-4/12">
-                    <Img fluid={data.file.childImageSharp.fluid} className="w-64 lg:w-96 pr-10 pb-10"/>
+                    <Img fluid={fluid} className="w-64 lg:w-96 pr-10 pb-10"/>
                 </div> 
                 <div className="w-full lg:w-8/12">
                     <div className="w-full flex flex-col lg:flex-row items-baseline mb-8">
@@ -121,5 +119,4 @@ const ShortText = styled.div`
 `;
 
 const Span = styled.span`
-    p
 `;

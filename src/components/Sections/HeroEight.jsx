@@ -54,8 +54,10 @@ export default function HeroEight() {
                 const {content, name, img, project, id} = data;
                 return(
                     <Card key={id}>
-                        <p>
-                            {content}
+                        <p> 
+                            <i>
+                                {content}
+                            </i>
                         </p>
                         <Profile>
                             {/* <Img src={img} alt={img} /> */}
@@ -74,11 +76,11 @@ export default function HeroEight() {
   );
 }
 const Card = styled.div`
-    /* margin: 20px; */
     padding: 20px;
-    background-color: #e3e3e3;
+    background-color: #fff;
     border-radius: 10px;
-    box-shadow: var(#000000, 0 0 #0000), var(#000000, 0 0 #0000), var(#000000);
+    border: 1px solid #ccc;
+    opacity: 80%
 `;
 
 const Profile = styled.div`

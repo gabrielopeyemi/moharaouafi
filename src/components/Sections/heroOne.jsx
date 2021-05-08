@@ -29,8 +29,8 @@ export default function HeroOne() {
                         <Img fluid={data.file.childImageSharp.fluid} style={{left: '-30px'}}  className="relative right-50 lg:right-100 w-full lg:w-bg-mac select-none lg:pr-4"/>
                     </div> 
                     <div class="w-full lg:w-6/12 flex flex-col items-center text-center py-10">
-                        <H2 class="my-2 leading-10">VOUS CHERCHEZ À VOUS <br/> DÉMARQUER DE VOS CONCURRENTS ? </H2> 
-                        <P class="mt-6 text-base lg:text-2xl">Basée sur nice, nous pouvons nous rencontrer autour d’un café pour discuter de votre projet ou par email si vous vous trouvez en dehors de nice</P> 
+                        <H2 class="my-2 leading-10">VOUS CHERCHEZ À VOUS <br/> DÉMARQUER DE VOS CONCURRENTS{' '}?</H2> 
+                        <P class="mt-6 text-base lg:text-2xl">Optez pour une identité visuelle attrayante et efficace</P> 
                         <button class="mt-6 bg-transparent border-2 border-white rounded-full py-3 px-4 text-white text-sm uppercase font-medium focus:outline-none hover:bg-white hover:text-green-600 transition duration-300">Mes réalisations</button>
                     </div>
                 </div>
@@ -42,12 +42,12 @@ export default function HeroOne() {
     )
 }
 
-
+ 
 const H2 = styled.h2`
     text-transform: uppercase;
-    font-weight: 900;
+    font-weight: 500;
     color: white;
-    font-size: 27px;
+    font-size: 30px;
     @media only screen and (max-width: 655px){
         font-size: 25px;
     };
@@ -67,6 +67,7 @@ const H2 = styled.h2`
 
 const P = styled.p`
     color: white;
+    font-size: 22px;
     @media only screen and (max-width: 655px){
         font-size: 20px;
     };

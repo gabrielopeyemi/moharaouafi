@@ -2,6 +2,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
 import Img from 'gatsby-image';
+import { faFileExcel } from '@fortawesome/free-regular-svg-icons';
 
 export default function HeroThree() {
   const data = useStaticQuery(graphql`
@@ -36,16 +37,11 @@ export default function HeroThree() {
                 </span>
             </div>
             <div className="flex flex-wrap items-center my-10 lg:my-20">
-              {/* <div className='row'>
-                {Data.map((data, i)=>(
-                  <ServiceCard data={data} key={i}/> 
-                ))}
-              </div> */}
               <CardWarp>
                         {Data.map((post)=>(
-                            <CardItem>
-                                <div>
-                                  <Img style={{width: '100%'}} fluid={post.frontmatter.image.childImageSharp.fluid} />
+                            <CardItem className="lg:hover:shadow-md">
+                                <div style={{justifyContent: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+                                  <Img style={{width: '80%'}} fluid={post.frontmatter.image.childImageSharp.fluid} />
                                     <div className="card-body">
                                         <H3 className="card-title">{post.frontmatter.Name}</H3>
                                         <p className="card-text">{post.frontmatter.about}</p>
@@ -81,9 +77,6 @@ const CardItem = styled.div`
     @media only screen and (max-width: 524px){
         width: 100%;
     }
-    &:hover{
-      border: 1px solid #ccc;
-    }
 `;
 
 const CardInner = styled.div`
@@ -94,7 +87,7 @@ const CardInner = styled.div`
 `;
 
 const H3 = styled.h3`
-    text-transform: uppercase;
+    text-align: center;
     margin-top: 2rem;
     margin-bottom: 1.25rem;
     font-size: 1.25rem;

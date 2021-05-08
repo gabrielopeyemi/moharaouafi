@@ -1,19 +1,18 @@
 ---
-title: La charte graphique quelle est son utilité ?
-stack: Computers
-slug: How-compter-revolued 
-group: Blog
-date: 2021-01-03T00:00:00+00:00 
-image: ../assets/Image/blog/postOne.jpg
+title: Latest Car
+stack: Cars
+slug: latest-car-we-made 
+date: 2021-05-01T00:00:00+00:00  
+image: ../assets/Image/blog/imageFive.jpg 
 ---
 
 
 
 
-**First generations of computer** consectetur adipiscing elit. Nullam faucibus a turpis et dignissim. Pellentesque nunc massa, lobortis in orci maximus, consectetur fringilla leo. Sed quis neque risus. Nunc augue lacus, facilisis ut enim in, suscipit faucibus orci. Suspendisse potenti. Ut elementum orci odio, quis tincidunt mauris dignissim nec. Nullam consequat odio sapien, vel rutrum augue bibendum at. Nam eget turpis in turpis pulvinar ullamcorper. Morbi congue, eros sed mollis lacinia, odio nulla viverra elit, nec bibendum dui lectus laoreet ante. Nullam eget ultrices metus. Phasellus nec pretium leo. Sed non odio ligula. Fusce urna elit, sagittis nec iaculis in, egestas at mi. Pellentesque non scelerisque metus. Integer egestas eros sed elit tristique, a consequat nulla tincidunt.
+**Nice car** consectetur adipiscing elit. Nullam faucibus a turpis et dignissim. Pellentesque nunc massa, lobortis in orci maximus, consectetur fringilla leo. Sed quis neque risus. Nunc augue lacus, facilisis ut enim in, suscipit faucibus orci. Suspendisse potenti. Ut elementum orci odio, quis tincidunt mauris dignissim nec. Nullam consequat odio sapien, vel rutrum augue bibendum at. Nam eget turpis in turpis pulvinar ullamcorper. Morbi congue, eros sed mollis lacinia, odio nulla viverra elit, nec bibendum dui lectus laoreet ante. Nullam eget ultrices metus. Phasellus nec pretium leo. Sed non odio ligula. Fusce urna elit, sagittis nec iaculis in, egestas at mi. Pellentesque non scelerisque metus. Integer egestas eros sed elit tristique, a consequat nulla tincidunt.
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque volutpat, eros eu dictum viverra, metus lectus volutpat est, eu imperdiet metus massa vitae dolor. Duis egestas, dui vitae maximus pellentesque, purus enim sollicitudin arcu, a dapibus nibh ex sed tellus. Pellentesque ornare facilisis risus sit amet gravida. Etiam congue hendrerit nibh id pellentesque. Proin lacinia velit sed mi condimentum, pulvinar finibus magna condimentum. Nunc ex sem, tincidunt sit amet lorem convallis, ultrices vestibulum erat. Nulla id tristique purus, eget dapibus lacus.
-
+ 
 Integer nec rutrum purus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed nisl eros, luctus non porttitor ut, sodales sed odio. Proin luctus elit ut mi dictum dictum sit amet vitae nibh. Etiam vulputate metus eget erat porta, eu vehicula tellus fermentum. Cras vel leo nisi. Ut ullamcorper cursus nulla, vel rutrum massa pulvinar non. Nulla eu nisi ullamcorper, gravida nibh in, imperdiet felis. Morbi ut diam quis ante tincidunt vulputate. Suspendisse lacinia posuere tortor quis pulvinar. Curabitur feugiat facilisis orci, id molestie neque volutpat ut.
 
 Nunc fringilla ac nulla ut volutpat. Nam bibendum purus at velit varius, in hendrerit dolor tempor. Pellentesque sit amet consectetur urna, vitae elementum libero. Donec efficitur ex varius, sodales lorem in, tempor risus. Aenean scelerisque, ex et iaculis commodo, purus justo porta turpis, id hendrerit mauris nisl in nulla. Aenean ligula libero, consequat eget posuere quis, suscipit eget risus. Nulla fringilla metus ut ultricies viverra.
@@ -36,3 +35,4 @@ Sed vestibulum eu nulla a porta. Morbi nisi mi, ultricies et dui et, dapibus gra
 Etiam quis accumsan nunc. Fusce semper malesuada magna, eget sagittis orci blandit a. Morbi id scelerisque mauris, ut eleifend urna. Pellentesque vehicula varius nisi eu interdum. Curabitur nec fermentum felis. Duis dolor ligula, auctor in porttitor non, porttitor vitae sapien. Nulla luctus laoreet tellus, nec iaculis tellus porta a. Nam sed porta sapien, id congue arcu. Suspendisse faucibus, ipsum ut maximus ultrices, risus lectus dapibus tellus, eget elementum risus lorem ut ipsum. In aliquet suscipit justo, sed ultricies justo maximus vitae. Aenean accumsan mauris metus, ac luctus tortor malesuada eu. Quisque pretium quis ante quis pharetra. Proin et nibh rhoncus, lacinia nibh eget, varius tellus. Proin posuere mattis mauris, eget fringilla nibh auctor id.
 
 Donec sit amet lorem augue. Vivamus arcu ligula, gravida eget vehicula non, sodales et diam. Nunc sit amet ligula eu neque tempor pretium et vitae ex. Phasellus rhoncus eros at dui dapibus, nec interdum libero consequat. Quisque sit amet tellus tincidunt, iaculis ante quis, sodales erat. Mauris tellus ex, iaculis et semper quis, pellentesque eu tortor. Fusce nulla nibh, finibus sit amet sapien eget, suscipit tristique eros. Maecenas non velit suscipit, rutrum nisi id, semper felis. Etiam facilisis posuere ipsum ultrices molestie. Sed dapibus, lectus eget tempor suscipit, nisl augue varius est, nec feugiat urna libero vitae arcu. 
+

@@ -1,5 +1,5 @@
 ---
-title: La charte graphique quelle est son utilité ?
+title: New post
 stack: Computers
 slug: How-compter-revolued 
 group: Blog

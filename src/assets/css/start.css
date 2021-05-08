@@ -26,6 +26,7 @@
 @media only screen and (max-width: 600px) {
     .bg-discover-smartphone {
         background-image: url('./../Image/DiscoveryCall/mobile.jpg');
+        background-size: cover;
     }
   }
 
@@ -220,17 +221,25 @@
         display: none;
     }
 }
-.modal{
-    padding: 0px !important;
-}
+
 .modal-dialog {
     max-width: 100% !important;
-    margin: auto;
-    width: 100%;
-    padding: 10px 80px 20px 80px;
-    background-color: #fff;
+    margin: auto !important;
+    width: 100% !important;
+    background-color: #0000;
+    background: transparent;
+}  
+
+.modal{
+    padding-left: 0 !important;
+    background-color: #0F2829;
+    background: transparent;
 }
 
 .modal-content{
-    border: 0px;
+    background: #000000ab;
+}
+.modal-body {
+    padding: 3rem;
+
 }

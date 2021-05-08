@@ -27,7 +27,7 @@ const INavbar = () => {
                 <a href="#service">Service</a>
               </li> 
               <li className="uppercase mx-5 text-white font-medium text-lg">
-                <a href="#">Portfolio</a>
+                <a href="#portfolio">Portfolio</a>
               </li> 
               <li className="uppercase mx-5 text-white font-medium text-lg">
                 <Link to="/blogs">Blog</Link>
@@ -48,16 +48,16 @@ const INavbar = () => {
                     <nav className="bm-item-list">
                       <ul className="flex flex-col">
                         <li onClick={()=> setNavbarOpen(false)} className="uppercase my-4 -ml-4 text-white font-medium text-lg">
-                          <a href="#">Service</a>
+                          <a href="#service">Service</a>
                         </li> 
                         <li onClick={()=> setNavbarOpen(false)} className="uppercase my-4 -ml-4 text-white font-medium text-lg">
-                          <a href="#">Portfolio</a>
+                          <a href="#portfolio">Portfolio</a>
                         </li> 
                         <li onClick={()=> setNavbarOpen(false)} className="uppercase my-4 -ml-4 text-white font-medium text-lg">
                           <a href="javascript:void">Blog</a>
                         </li> 
                         <li onClick={()=> setNavbarOpen(false)} className="uppercase my-4 -ml-4 text-white font-medium text-lg">
-                          <a href="#">Contact</a>
+                          <a href="#contact">Contact</a>
                         </li> 
                         <li onClick={()=> setNavbarOpen(false)} className="uppercase my-4 -ml-4 text-white font-medium text-lg">
                           <a href="/faq" className="">F.A.Q</a>

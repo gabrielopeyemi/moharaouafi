@@ -78,7 +78,7 @@ export default function HeroSix() {
     });
   return (
     <>
-        <section className="flex justify-center mx-6 sm:mt-10 lg:mt-40">
+        <section id="portfolio" className="flex justify-center mx-6 sm:mt-10 lg:mt-40">
            <div className="block container">
                <div className="w-full flex flex-col lg:flex-row items-baseline mb-10">
                    <h1 className="text-gray-600 text-2xl lg:text-6xl font-bold uppercase">Mes réalisations</h1>  
@@ -89,46 +89,55 @@ export default function HeroSix() {
                             <CardItem>
                                 <ImgDiv onClick={()=> setShow0(!show0)}>
                                     <Img  style={{width: '100%', borderRadius: '10px'}} fluid={Galleries[0].frontmatter.image.childImageSharp.fluid} />
+                                    <OverLay></OverLay>
                                 </ImgDiv>
                             </CardItem>
                             <CardItem>
                                 <ImgDiv onClick={()=> setShow1(!show1)}>
                                     <Img  style={{width: '100%', borderRadius: '10px'}} fluid={Galleries[1].frontmatter.image.childImageSharp.fluid} />
+                                    <OverLay></OverLay>
                                 </ImgDiv>
                             </CardItem>
                             <CardItem>
                                 <ImgDiv onClick={()=> setShow2(!show2)}>
                                     <Img  style={{width: '100%', borderRadius: '10px'}} fluid={Galleries[2].frontmatter.image.childImageSharp.fluid} />
+                                    <OverLay></OverLay>
                                 </ImgDiv>
                             </CardItem>
                             <CardItem>
                                 <ImgDiv onClick={()=> setShow3(!show3)}>
                                     <Img  style={{width: '100%', borderRadius: '10px'}} fluid={Galleries[3].frontmatter.image.childImageSharp.fluid} />
+                                    <OverLay></OverLay>
                                 </ImgDiv>
                             </CardItem>
                             <CardItem>
                                 <ImgDiv onClick={()=> setShow4(!show4)}>
                                     <Img  style={{width: '100%', borderRadius: '10px'}} fluid={Galleries[4].frontmatter.image.childImageSharp.fluid} />
+                                    <OverLay></OverLay>
                                 </ImgDiv>
                             </CardItem>
                             <CardItem>
                                 <ImgDiv onClick={()=> setShow5(!show5)}>
                                     <Img  style={{width: '100%', borderRadius: '10px'}} fluid={Galleries[5].frontmatter.image.childImageSharp.fluid} />
+                                    <OverLay></OverLay>
                                 </ImgDiv>
                             </CardItem>
                             <CardItem>
                                 <ImgDiv onClick={()=> setShow6(!show6)}>
                                     <Img  style={{width: '100%', borderRadius: '10px'}} fluid={Galleries[6].frontmatter.image.childImageSharp.fluid} />
+                                    <OverLay></OverLay>
                                 </ImgDiv>
                             </CardItem>
                             <CardItem>
                                 <ImgDiv onClick={()=> setShow7(!show7)}>
                                     <Img  style={{width: '100%', borderRadius: '10px'}} fluid={Galleries[7].frontmatter.image.childImageSharp.fluid} />
+                                    <OverLay></OverLay>
                                 </ImgDiv>
                             </CardItem>
                             <CardItem>
                                 <ImgDiv onClick={()=> setShow8(!show8)}>
                                     <Img  style={{width: '100%', borderRadius: '10px'}} fluid={Galleries[8].frontmatter.image.childImageSharp.fluid} />
+                                    <OverLay></OverLay>
                                 </ImgDiv>
                             </CardItem>
                     </CardWarp>
@@ -275,6 +284,7 @@ const TimesIcons = styled(FaTimesCircle)`
 
 const ImgDiv = styled.div`
   border-radius: 10px;
+  position: relative;
 `;
 
 const CardWarp = styled.div`
@@ -283,6 +293,29 @@ const CardWarp = styled.div`
     justify-content: space-between;
     flex-wrap: wrap;
 `;
+
+const OverLay = styled.div`
+  transition: opacity 0.2s;
+  opacity: 0;
+  background-color: #88dca5;
+  text-align: center;
+  position: absolute;
+  padding: 12% 4%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 10px;
+  top: 0;
+  display: block;
+  &:hover{
+    opacity: 0.8;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 10px;
+    font-weight: normal;
+  }
+`;
+
 
 const CardItem = styled.div`
     width: 33%;

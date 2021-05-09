@@ -46,7 +46,7 @@ export default function HeadOne(props) {
 
 const H2 = styled.h2`
     text-transform: uppercase;
-    font-weight: 900;
+    font-weight: 500;
     color: white;
     font-size: 27px;
     @media only screen and (max-width: 655px){

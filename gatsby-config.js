@@ -1,8 +1,8 @@
 module.exports = {
   pathPrefix: "/gatsby-react-bootstrap-starter",
   siteMetadata: {
-    title: `Moharaouafi`,
-    description: `A starter that includes react-bootstrap and react-icons, along with SASS compilation.`,
+    title: `Moha Raouafi`,
+    description: `Graphiste freelance basée sur  NIce, Moha Raouafi vous accompagne dans votre communication visuelle : print, événementielle et digitale.`,
     author: `Gabriel Opeyemi <famosipe2010@gamil.com> https://gabrielopeyemi.com`,
   },
   plugins: [

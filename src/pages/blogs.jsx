@@ -3,6 +3,7 @@ import {ENavbar} from '../components/Navigation';
 import { Link, graphql} from 'gatsby';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
+import SEO from "../components/seo";
 import Layout from './../components/layout';
 import HeadOne from './../components/HeadOne';
 
@@ -13,6 +14,7 @@ export default function Blogs({ data }) {
 
     return (
         <Layout>
+        <SEO title="Blogs - Moha Raouafi" keywords={[`Graphiste freelance print & web • la …`]} />
             <HeadOne Title='Blogs'/>
             <div className='container'>
                 <div className='row' style={{marginTop: '50px', marginBottom: '100px', justifyContent: 'center'}}>

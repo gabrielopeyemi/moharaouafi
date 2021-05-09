@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import {ENavbar} from "../components/Navigation";
 import HeadOne from './../components/HeadOne';
 import Layout from './../components/layout';
+import SEO from "../components/seo";
 export class FAQ extends Component {
     render() {
         return (
@@ -33,7 +34,7 @@ const AccordionDiv = () =>{
             id: 1,
             num: '1',
             head: 'Je souhaite travailler avec vous pour ma communication, comment procéder ?',
-            content: `ER CONTACT : Discutons de votre projet l Nous évaluons ensemble vos besoins puis je vous envoie un devis adapté à votre demande Un acompte vous sera également demandé au début de la prestation. PLANNING: Je vous propose un planning récapitulatif des étapes clés du projet. Un projet, selon son envergure et mon planning, peut demander 1 à 2 mois pour se concrétiser, il est donc nécessaire de me contacter avec un peu d'avance. CRÉATION : Je commence par préparer plusieurs propositions de visuels que je vous présente. La piste sélectionnée est finalisée selon vos retours, afin de correspondre parfaitement à vos attentes. FINALISATION : Place à la finalisation des fichiers l Une fois la création validée je vous fournis les fichiers dans des formats adaptés à vos besoins (logos vectorisés, pdf pour les fichiers à imprimer...). `,
+            content: `1ER CONTACT : Discutons de votre projet Nous évaluons ensemble vos besoins puis je vous envoie un devis adapté à votre demande Un acompte vous sera également demandé au début de la prestation.  PLANNING: Je vous propose un planning récapitulatif des étapes clés du projet. Un projet, selon son envergure et mon planning, peut demander 1 à 2 mois pour se concrétiser, il est donc nécessaire de me contacter avec un peu d'avance. CRÉATION : Je commence par préparer plusieurs propositions de visuels que je vous présente. La piste sélectionnée est finalisée selon vos retours, afin de correspondre parfaitement à vos attentes. FINALISATION : Place à la finalisation des fichiers l Une fois la création validée je vous fournis les fichiers dans des formats adaptés à vos besoins (logos vectorisés, pdf pour les fichiers à imprimer...). `,
 
         },
         {
@@ -95,6 +96,7 @@ const AccordionDiv = () =>{
     ]
     return(
         <div className='my-10 lg:my-20'>
+            <SEO title="FAQ - Moha Raouafi" keywords={[`Graphiste freelance print & web • la …`]} />
             <Accordion>
                 {Data.map((data, i)=>(
                     <Card style={{ margin: '10px'}}>

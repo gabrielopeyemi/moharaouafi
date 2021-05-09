@@ -20,7 +20,7 @@ import './../assets/css/start.css';
 
 const IndexPage = () => (
     <Layout pageInfo={{ pageName: "index" }}>
-        <SEO title="Home" keywords={[`gatsby`, `react`, `bootstrap`]} />
+        <SEO title="Moha Raouafi" keywords={[`graphiste`, `graphiste freelance`, `graphiste nice`, `designer à nice`, `flyer nice`, `logo nice`]} />
         <HeroOne/>
         <HeroTwo />
         <HeroThree />

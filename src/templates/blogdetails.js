@@ -1,7 +1,8 @@
 import React from 'react'
 import {ENavbar} from '../components/Navigation'
 import {graphql} from 'gatsby';
-import Layout from './../components/layout'
+import Layout from './../components/layout';
+import SEO from "../components/seo";
 import HeadOne from '../components/BlogHeadOne';
 
 export default function BlogDetails({ data }) {
@@ -10,16 +11,7 @@ export default function BlogDetails({ data }) {
     const {html} = data.markdownRemark;
     return (
         <Layout>
-                {/* <ENavbar />
-                <div className="flex justify-center">
-                    <div className="flex flex-wrap items-center container my-10 mx-6 pt-4"> 
-                        <div className="w-full flex flex-col items-center text-center py-10">
-                            <h2 style={{lineHeight: 1.5}} className="my-2 text-white text-xl lg:text-3xl leading-10 uppercase font-medium lg:font-medium">{title}</h2> 
-                            <p style={{lineHeight: 1.5}} className="my-2 text-white text-xl lg:text-3xl leading-10 uppercase font-medium lg:font-medium">{stack}</p>
-                        </div>
-                    </div>
-                </div>
-            </header> */}
+        <SEO title={`${title} - Moha Raouafi`} keywords={[`${stack}`,`Graphiste freelance print & web • la …`]} />
             <HeadOne Title={title} subTitle={stack} />
             <div className='container'>
                 <div className='row'>

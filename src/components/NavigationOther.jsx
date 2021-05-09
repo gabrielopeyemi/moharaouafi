@@ -29,7 +29,7 @@ const INavbar = () => {
                 <Link to="/blogs">Blog</Link>
               </li>
               <li className="uppercase mx-5 text-white font-medium text-lg">
-                <Link to="#contact">Contact</Link>
+                <Link to="/">Contact</Link>
               </li> 
               <li className="uppercase mx-5 text-white font-medium text-lg">
                 <Link to="/faq" className="">F.A.Q</Link>

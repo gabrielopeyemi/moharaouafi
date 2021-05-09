@@ -54,7 +54,7 @@ const INavbar = () => {
                           <a href="#portfolio">Portfolio</a>
                         </li> 
                         <li onClick={()=> setNavbarOpen(false)} className="uppercase my-4 -ml-4 text-white font-medium text-lg">
-                          <a href="javascript:void">Blog</a>
+                          <Link to="/blogs">Blog</Link>
                         </li> 
                         <li onClick={()=> setNavbarOpen(false)} className="uppercase my-4 -ml-4 text-white font-medium text-lg">
                           <a href="#contact">Contact</a>

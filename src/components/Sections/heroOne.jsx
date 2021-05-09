@@ -31,7 +31,7 @@ export default function HeroOne() {
                     <div class="w-full lg:w-6/12 flex flex-col items-center text-center py-10">
                         <H2 className="my-2 leading-10">VOUS CHERCHEZ À VOUS <br/> DÉMARQUER DE VOS CONCURRENTS{' '}?</H2> 
                         <P className="mt-6 text-base lg:text-2xl">Optez pour une identité visuelle attrayante et efficace</P> 
-                        <Button className="mt-6 bg-transparent border-2 border-white rounded-full py-3 px-4 text-white text-sm uppercase font-medium focus:outline-none hover:bg-white hover:text-green-600 transition duration-300">
+                        <Button href="#portifolio" className="mt-6 bg-transparent border-2 border-white rounded-full py-3 px-4 text-white text-sm uppercase font-medium focus:outline-none hover:bg-white hover:text-green-600 transition duration-300">
                             Mes réalisations
                         </Button>
                     </div>
@@ -83,7 +83,7 @@ const P = styled.p`
         font-size: 13px;
     };
 `;
-const Button = styled.button`
+const Button = styled.a`
     &:hover{
         color: #6cbc8f !important;
         background-color: #fff !important;

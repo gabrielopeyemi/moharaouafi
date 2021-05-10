@@ -8,7 +8,7 @@ export default function HeroOne() {
 
     const data = useStaticQuery(graphql`
         query Banner {
-            file(relativePath: {eq: "Imagewelcomes.png"}) {
+            file(relativePath: {eq: "Image-welcomes.png"}) {
                 childImageSharp {
                     fluid {
                         ...GatsbyImageSharpFluid

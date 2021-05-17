@@ -8,7 +8,7 @@ export default function HeadOne(props) {
 
     const data = useStaticQuery(graphql`
         query Bannerthree {
-            file(relativePath: {eq: "Imagewelcomes.png"}) {
+            file(relativePath: {eq: "Image-welcomes.png"}) {
                 childImageSharp {
                     fluid {
                         ...GatsbyImageSharpFluid

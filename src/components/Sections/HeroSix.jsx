@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image';
 import styled from 'styled-components';
-import { FaTimesCircle } from 'react-icons/fa'
+import { FaTimes } from 'react-icons/fa'
 import Modal from 'react-bootstrap/Modal'
 
 export default function HeroSix() {
@@ -66,13 +66,8 @@ export default function HeroSix() {
                 <div className="flex flex-wrap justify-between w-full mt-10 lg:my-8">
                     <CardWarp>
                             <CardItem>
-                                <div onClick={()=> setShow0(!show0)}>
-                                    <Img  style={{width: '100%'}} fluid={Galleries[0].frontmatter.image.childImageSharp.fluid} />
-                                </div>
-                            </CardItem>
-                            <CardItem>
-                                <div onClick={()=> setShow1(!show1)}>
-                                    <Img  style={{width: '100%'}} fluid={Galleries[1].frontmatter.image.childImageSharp.fluid} />
+                                <div onClick={()=> setShow5(!show5)}>
+                                    <Img  style={{width: '100%'}} fluid={Galleries[5].frontmatter.image.childImageSharp.fluid} />
                                 </div>
                             </CardItem>
                             <CardItem>
@@ -81,18 +76,8 @@ export default function HeroSix() {
                                 </div>
                             </CardItem>
                             <CardItem>
-                                <div onClick={()=> setShow3(!show3)}>
-                                    <Img  style={{width: '100%'}} fluid={Galleries[3].frontmatter.image.childImageSharp.fluid} />
-                                </div>
-                            </CardItem>
-                            <CardItem>
-                                <div onClick={()=> setShow4(!show4)}>
-                                    <Img  style={{width: '100%'}} fluid={Galleries[4].frontmatter.image.childImageSharp.fluid} />
-                                </div>
-                            </CardItem>
-                            <CardItem>
-                                <div onClick={()=> setShow5(!show5)}>
-                                    <Img  style={{width: '100%'}} fluid={Galleries[5].frontmatter.image.childImageSharp.fluid} />
+                                <div onClick={()=> setShow7(!show7)}>
+                                    <Img  style={{width: '100%'}} fluid={Galleries[7].frontmatter.image.childImageSharp.fluid} />
                                 </div>
                             </CardItem>
                             <CardItem>
@@ -101,13 +86,28 @@ export default function HeroSix() {
                                 </div>
                             </CardItem>
                             <CardItem>
-                                <div onClick={()=> setShow7(!show7)}>
-                                    <Img  style={{width: '100%'}} fluid={Galleries[7].frontmatter.image.childImageSharp.fluid} />
+                                <div onClick={()=> setShow1(!show1)}>
+                                    <Img  style={{width: '100%'}} fluid={Galleries[1].frontmatter.image.childImageSharp.fluid} />
+                                </div>
+                            </CardItem>
+                            <CardItem>
+                                <div onClick={()=> setShow3(!show3)}>
+                                    <Img  style={{width: '100%'}} fluid={Galleries[3].frontmatter.image.childImageSharp.fluid} />
                                 </div>
                             </CardItem>
                             <CardItem>
                                 <div onClick={()=> setShow8(!show8)}>
                                     <Img  style={{width: '100%'}} fluid={Galleries[8].frontmatter.image.childImageSharp.fluid} />
+                                </div>
+                            </CardItem>
+                            <CardItem>
+                                <div onClick={()=> setShow0(!show0)}>
+                                    <Img  style={{width: '100%'}} fluid={Galleries[0].frontmatter.image.childImageSharp.fluid} />
+                                </div>
+                            </CardItem>
+                            <CardItem>
+                                <div onClick={()=> setShow4(!show4)}>
+                                    <Img  style={{width: '100%'}} fluid={Galleries[4].frontmatter.image.childImageSharp.fluid} />
                                 </div>
                             </CardItem>
                     </CardWarp>
@@ -117,23 +117,19 @@ export default function HeroSix() {
         
         {/* Modal 0 */}
         <Modal show={show0}>
-          <div>
-            <Title>
-              hello
-            </Title>
+          <ModelHead>
+            <Title/>
             <TimesIcons onClick={()=> setShow0(!show0)}/>
-          </div>
-          <div>
+          </ModelHead>
+          <Modal.Body>
             <Img style={{width: '100%'}} fluid={Galleries[0].frontmatter.imagePC.childImageSharp.fluid} />
-          </div>
+          </Modal.Body>
       </Modal>
         
         {/* Modal 1 */}
         <Modal show={show1}>
           <ModelHead>
-            <Title>
-            {Galleries[0].frontmatter.Name}
-            </Title>
+            <Title/>
             <TimesIcons onClick={()=> setShow1(!show1)}/>
           </ModelHead>
           <Modal.Body>
@@ -144,9 +140,7 @@ export default function HeroSix() {
         {/* Modal 2 */}
         <Modal show={show2}>
           <ModelHead>
-            <Title>
-            {Galleries[2].frontmatter.Name}
-            </Title>
+            <Title/>
             <TimesIcons onClick={()=> setShow2(!show2)}/>
           </ModelHead>
           <Modal.Body>
@@ -157,9 +151,7 @@ export default function HeroSix() {
         {/* Modal 3 */}
         <Modal show={show3}>
           <ModelHead>
-            <Title>
-            {Galleries[3].frontmatter.Name}
-            </Title>
+            <Title/>
             <TimesIcons onClick={()=> setShow3(!show3)}/>
           </ModelHead>
           <Modal.Body>
@@ -170,9 +162,7 @@ export default function HeroSix() {
         {/* Modal 4 */}
         <Modal show={show4}>
           <ModelHead>
-            <Title>
-            {Galleries[4].frontmatter.Name}
-            </Title>
+            <Title />
             <TimesIcons onClick={()=> setShow4(!show4)}/>
           </ModelHead>
           <Modal.Body>
@@ -183,9 +173,7 @@ export default function HeroSix() {
         {/* Modal 5 */}
         <Modal show={show5}>
           <ModelHead>
-            <Title>
-              {Galleries[5].frontmatter.Name}
-            </Title>
+            <Title />
             <TimesIcons onClick={()=> setShow5(!show5)}/>
           </ModelHead>
           <Modal.Body>
@@ -196,9 +184,7 @@ export default function HeroSix() {
         {/* Modal 6 */}
         <Modal show={show6}>
           <ModelHead>
-            <Title>
-            {Galleries[6].frontmatter.Name}
-            </Title>
+            <Title />
             <TimesIcons onClick={()=> setShow6(!show6)}/>
           </ModelHead>
           <Modal.Body>
@@ -209,9 +195,7 @@ export default function HeroSix() {
         {/* Modal 7 */}
         <Modal show={show7}>
           <ModelHead>
-            <Title>
-            {Galleries[7].frontmatter.Name}
-            </Title>
+            <Title />
             <TimesIcons onClick={()=> setShow7(!show7)}/>
           </ModelHead>
           <Modal.Body>
@@ -222,9 +206,7 @@ export default function HeroSix() {
         {/* Modal 8 */}
         <Modal show={show8}>
           <ModelHead>
-            <Title>
-            {Galleries[8].frontmatter.Name}
-            </Title>
+            <Title />
             <TimesIcons onClick={()=> setShow8(!show8)}/>
           </ModelHead>
           <Modal.Body>
@@ -246,8 +228,10 @@ const Title = styled.span`
 
 `;
 
-const TimesIcons = styled(FaTimesCircle)`
-  color: gray;
+const TimesIcons = styled(FaTimes)`
+  color: white;
+  width: 30px;
+  height: 30px;
 `;
 
 const CardWarp = styled.div`

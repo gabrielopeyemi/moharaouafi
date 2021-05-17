@@ -44,7 +44,7 @@ export default function HeroThree() {
                                   <Img style={{width: '80%'}} fluid={post.frontmatter.image.childImageSharp.fluid} />
                                     <div className="card-body">
                                         <H3 className="card-title">{post.frontmatter.Name}</H3>
-                                        <p className="card-text">{post.frontmatter.about}</p>
+                                        <p className="card-text text-center">{post.frontmatter.about}</p>
                                      </div>
                                 </div>
                             </CardItem>
@@ -67,7 +67,7 @@ const CardWarp = styled.div`
 const CardItem = styled.div`
     width: 32%;
     min-height: 18rem;
-    padding: 30px;
+    padding: 30px 0;
     margin: 5px;
     border-radius: 10px;
     margin-bottom: 10px;

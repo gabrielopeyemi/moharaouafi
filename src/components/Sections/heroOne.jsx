@@ -10,7 +10,7 @@ export default function HeroOne() {
         query Banner {
             file(relativePath: {eq: "Image-welcomes.png"}) {
                 childImageSharp {
-                    fluid {
+                    fluid (quality: 100, maxWidth: 1000) {
                         ...GatsbyImageSharpFluid
                     }
                 }

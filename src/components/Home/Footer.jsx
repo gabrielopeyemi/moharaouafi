@@ -86,7 +86,8 @@ export default function Footer() {
                 </div>
             </div> 
             <div className="max-w-screen-xl mx-auto  space-y-4 mt-8 lg:mt-12 border-t-2 border-gray-700 pt-8 ">
-                <p className="text-sm text-center md:text-left">Créatif et attentif aux dernières tendances, je façonne vos supports de communication papier en créant un graphisme innovant tout en vous accompagnant dans votre projet</p>
+                <p className="text-sm text-center md:text-left">Créatif et attentif aux dernières tendances, je façonne vos supports de communication papier en créant un graphisme innovant tout en vous accompagnant dans votre projet</p>          
+                <P className="text-sm text-center md:text-left">© Moha Raouafi – Tous droits réservés | <a href='https://docs.google.com/document/d/1MkduyztnskBDZnGJ67kF2YWlFbqxt-bKJJP7fEotkk8/edit?usp=sharing'>Mentions légales</a> | <a href='https://docs.google.com/document/d/1RVk2i3QdPIgwNH9K-nT-lm-jans-lr0eguRDBCPzSes/edit?usp=sharing'>CGV</a> </P>
             </div>
         </footer> 
     )
@@ -96,4 +97,9 @@ export default function Footer() {
 const Img = styled.img`
     width: 20px;
     height: 20px;
+`;
+
+const P = styled.p`
+    font-weight: 800
+   
 `;

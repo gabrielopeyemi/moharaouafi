@@ -26,7 +26,7 @@ export default function Footer() {
                     </div> 
                     <div className="col-span-4 col-start-2 md:pl-12 lg:pl-24">
                         <form action="#" className="flex items-center justify-between">
-                            <input id="email-address" name="email" type="email" required="required" autocomplete="email" placeholder="Email address" className="w-10/12 mr-2 appearance-none bg-transparent rounded-md relative block px-3 py-2 border border-gray-300 placeholder-gray-500 focus:ring-1 focus:outline-none focus:ring-green-500 focus:border-green-500 focus:z-10 sm:text-sm"/> 
+                            <input id="email-address" name="email" type="email" required="required" autocomplete="email" placeholder="Email adresse" className="w-10/12 mr-2 appearance-none bg-transparent rounded-md relative block px-3 py-2 border border-gray-300 placeholder-gray-500 focus:ring-1 focus:outline-none focus:ring-green-500 focus:border-green-500 focus:z-10 sm:text-sm"/> 
                             <button type="submit" className="w-2/12 group relative flex justify-center py-2 px-10 text-sm font-medium rounded-md focus:border-gray-800 text-white bg-primary hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
                                 Envoyer
                             </button>

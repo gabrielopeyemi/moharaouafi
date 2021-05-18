@@ -2,7 +2,7 @@
 title: La charte graphique quelle est son utilité ?
 stack: Computers
 slug: How-compter-revolued 
-group: Blog
+group: yuy
 date: 2021-01-03T00:00:00+00:00 
 image: ../assets/Image/blog/postOne.jpg
 ---

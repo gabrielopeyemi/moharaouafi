@@ -15,7 +15,7 @@ export default function Blogs({ data }) {
     return (
         <Layout>
         <SEO title="Blogs - Moha Raouafi" keywords={[`Graphiste freelance print & web • la …`]} />
-            <HeadOne Title='Blogs'/>
+            <HeadOne Title="Blog Design & culture visuelle"/>
             <div className='container'>
                 <div className='row' style={{marginTop: '50px', marginBottom: '100px', justifyContent: 'center'}}>
                     {postsData.map((post)=>(

@@ -44,7 +44,7 @@ export default function HeroThree() {
                                   <Img style={{width: '80%'}} fluid={post.frontmatter.image.childImageSharp.fluid} />
                                     <div className="card-body">
                                         <H3 className="card-title">{post.frontmatter.Name}</H3>
-                                        <p className="card-text text-center">{post.frontmatter.about}</p>
+                                        <p className="card-text text-center" style={{color: '#4b5563'}}>{post.frontmatter.about}</p>
                                      </div>
                                 </div>
                             </CardItem>

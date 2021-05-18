@@ -67,47 +67,47 @@ export default function HeroSix() {
                     <CardWarp>
                             <CardItem>
                                 <div onClick={()=> setShow5(!show5)}>
-                                    <Img  style={{width: '100%'}} fluid={Galleries[5].frontmatter.image.childImageSharp.fluid} />
+                                    <Img  style={{width: '100%', borderRadius: '10px'}} fluid={Galleries[5].frontmatter.image.childImageSharp.fluid} />
                                 </div>
                             </CardItem>
                             <CardItem>
                                 <div onClick={()=> setShow2(!show2)}>
-                                    <Img  style={{width: '100%'}} fluid={Galleries[2].frontmatter.image.childImageSharp.fluid} />
+                                    <Img  style={{width: '100%', borderRadius: '10px'}} fluid={Galleries[2].frontmatter.image.childImageSharp.fluid} />
                                 </div>
                             </CardItem>
                             <CardItem>
                                 <div onClick={()=> setShow7(!show7)}>
-                                    <Img  style={{width: '100%'}} fluid={Galleries[7].frontmatter.image.childImageSharp.fluid} />
+                                    <Img  style={{width: '100%', borderRadius: '10px'}} fluid={Galleries[7].frontmatter.image.childImageSharp.fluid} />
                                 </div>
                             </CardItem>
                             <CardItem>
                                 <div onClick={()=> setShow6(!show6)}>
-                                    <Img  style={{width: '100%'}} fluid={Galleries[6].frontmatter.image.childImageSharp.fluid} />
+                                    <Img  style={{width: '100%', borderRadius: '10px'}} fluid={Galleries[6].frontmatter.image.childImageSharp.fluid} />
                                 </div>
                             </CardItem>
                             <CardItem>
                                 <div onClick={()=> setShow1(!show1)}>
-                                    <Img  style={{width: '100%'}} fluid={Galleries[1].frontmatter.image.childImageSharp.fluid} />
+                                    <Img  style={{width: '100%', borderRadius: '10px'}} fluid={Galleries[1].frontmatter.image.childImageSharp.fluid} />
                                 </div>
                             </CardItem>
                             <CardItem>
                                 <div onClick={()=> setShow3(!show3)}>
-                                    <Img  style={{width: '100%'}} fluid={Galleries[3].frontmatter.image.childImageSharp.fluid} />
+                                    <Img  style={{width: '100%', borderRadius: '10px'}} fluid={Galleries[3].frontmatter.image.childImageSharp.fluid} />
                                 </div>
                             </CardItem>
                             <CardItem>
                                 <div onClick={()=> setShow8(!show8)}>
-                                    <Img  style={{width: '100%'}} fluid={Galleries[8].frontmatter.image.childImageSharp.fluid} />
+                                    <Img  style={{width: '100%', borderRadius: '10px'}} fluid={Galleries[8].frontmatter.image.childImageSharp.fluid} />
                                 </div>
                             </CardItem>
                             <CardItem>
                                 <div onClick={()=> setShow0(!show0)}>
-                                    <Img  style={{width: '100%'}} fluid={Galleries[0].frontmatter.image.childImageSharp.fluid} />
+                                    <Img  style={{width: '100%', borderRadius: '10px'}} fluid={Galleries[0].frontmatter.image.childImageSharp.fluid} />
                                 </div>
                             </CardItem>
                             <CardItem>
                                 <div onClick={()=> setShow4(!show4)}>
-                                    <Img  style={{width: '100%'}} fluid={Galleries[4].frontmatter.image.childImageSharp.fluid} />
+                                    <Img  style={{width: '100%', borderRadius: '10px'}} fluid={Galleries[4].frontmatter.image.childImageSharp.fluid} />
                                 </div>
                             </CardItem>
                     </CardWarp>

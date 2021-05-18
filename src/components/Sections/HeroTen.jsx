@@ -1,23 +1,34 @@
-import React from 'react';
+import React, {useState} from 'react';
 import emailjs from 'emailjs-com';
+import styled from 'styled-components';
 import IMG from './../../assets/Image/Contact/plane.png'
 import SectionHeader from './../SectionHeader';
 import Address from './../Address';
 import "./../../assets/css/tailwind.css";
+import { Spinner } from 'react-bootstrap';
+import toast, { Toaster } from 'react-hot-toast';
 
 export default function HeroTen() {
+    const [isLoading, setIsLoading] = useState(false)
     const header = {
         one: 'Vous avez un projet en tête?',
         two: `N'hésitez pas à me faire part de votre projet pour qu'ensemble nous lui donnions vie !`
     }
     function sendEmail(e) {
         e.preventDefault();
-    
+
+        setIsLoading(true);
         emailjs.sendForm('service_ydkhg5c', 'template_jykovgr', e.target, 'user_0PSkAfEGIfVOCK5zvxcMY')
           .then((result) => {
-              console.log(result.text);
+              console.log({result});
+              if(result.text === 'OK'){
+                toast.success('Email sent Successfully!');
+                setIsLoading(false);
+              }
           }, (error) => {
               console.log(error.text);
+              toast.success(error.text);
+              setIsLoading(false);
           });
       }
     
@@ -52,7 +63,10 @@ export default function HeroTen() {
                                     </div>
                                 </div> 
                                 <div className="mt-4">
-                                    <input type="submit" placeholder="Envoyer" className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-primary hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500" />
+                                    <button type="submit" className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-primary hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500" >
+                                    {isLoading ? <Loader animation="border" /> : ''}
+                                    Envoyer
+                                    </button>
                                 </div>
                             </div>
                         </form>
@@ -72,6 +86,14 @@ export default function HeroTen() {
                 </div>
             </div>
         </div>
+        <Toaster/>
     </>
   );
 }
+
+
+const Loader = styled(Spinner)`
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+`;

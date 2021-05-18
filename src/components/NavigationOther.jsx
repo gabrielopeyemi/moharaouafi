@@ -44,7 +44,16 @@ const INavbar = () => {
                     <nav className="bm-item-list">
                       <ul className="flex flex-col">
                         <li onClick={()=> setNavbarOpen(false)} className="uppercase my-4 -ml-4 text-white font-medium text-lg">
+                          <Link to="/">Service</Link>
+                        </li> 
+                        <li onClick={()=> setNavbarOpen(false)} className="uppercase my-4 -ml-4 text-white font-medium text-lg">
+                          <Link to="/">Portifolio</Link>
+                        </li> 
+                        <li onClick={()=> setNavbarOpen(false)} className="uppercase my-4 -ml-4 text-white font-medium text-lg">
                           <Link to="/blogs">Blog</Link>
+                        </li> 
+                        <li onClick={()=> setNavbarOpen(false)} className="uppercase my-4 -ml-4 text-white font-medium text-lg">
+                          <Link to="/">Contact</Link>
                         </li> 
                         <li onClick={()=> setNavbarOpen(false)} className="uppercase my-4 -ml-4 text-white font-medium text-lg">
                           <Link href="/faq" className="">F.A.Q</Link>

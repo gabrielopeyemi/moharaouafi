@@ -1,12 +1,12 @@
 import React, {useState} from 'react';
 import emailjs from 'emailjs-com';
-import styled from 'styled-components';
-import IMG from './../../assets/Image/Contact/plane.png'
-import SectionHeader from './../SectionHeader';
-import Address from './../Address';
-import "./../../assets/css/tailwind.css";
 import { Spinner } from 'react-bootstrap';
 import toast, { Toaster } from 'react-hot-toast';
+import styled from 'styled-components';
+import IMG from './../../assets/Image/Contact/plane.png'
+import "./../../assets/css/tailwind.css";
+import SectionHeader from './../SectionHeader';
+import Address from './../Address';
 
 export default function HeroTen() {
     const [isLoading, setIsLoading] = useState(false)

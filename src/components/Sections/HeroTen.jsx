@@ -22,7 +22,7 @@ export default function HeroTen() {
           .then((result) => {
               console.log({result});
               if(result.text === 'OK'){
-                toast.success('Email sent Successfully!');
+                toast.success('E-mail envoyé avec succès!');
                 setIsLoading(false);
               }
           }, (error) => {

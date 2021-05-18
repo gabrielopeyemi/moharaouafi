@@ -1,12 +1,33 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled from 'styled-components';
+import { Spinner } from 'react-bootstrap';
+import toast, { Toaster } from 'react-hot-toast';
 import '../../styles/css/main.css'
 import LogoImage from '../Logo';
+import emailjs from 'emailjs-com';
 import artstationIcon from './../../assets/icon/artstation.png';
 
 
 
 export default function Footer() {
+    const [isLoading, setIsLoading] = useState(true)
+    function sendEmail(e) {
+        e.preventDefault();
+
+        setIsLoading(true);
+        emailjs.sendForm('service_ydkhg5c', 'template_pnlzhzo', e.target, 'user_0PSkAfEGIfVOCK5zvxcMY')
+          .then((result) => {
+              console.log({result});
+              if(result.text === 'OK'){
+                toast.success('Successful join the our newletter!');
+                setIsLoading(false);
+              }
+          }, (error) => {
+              console.log(error.text);
+              toast.success(error.text);
+              setIsLoading(false);
+          });
+      }
     return (
         <footer className="bg-gray-800 text-gray-400 px-6 lg:px-8 py-12 relative">
             <div className="max-w-screen-xl mx-auto mb-6 lg:mb-8 flex items-center justify-between">
@@ -25,7 +46,7 @@ export default function Footer() {
                         <h5 className="text-xl font-bold text-white leading-none">Newsletter</h5>
                     </div> 
                     <div className="col-span-4 col-start-2 md:pl-12 lg:pl-24">
-                        <form action="#" className="flex items-center justify-between">
+                        <form className="flex items-center justify-between" onSubmit={sendEmail}>
                             <input id="email-address" name="email" type="email" required="required" autocomplete="email" placeholder="Email adresse" className="w-10/12 mr-2 appearance-none bg-transparent rounded-md relative block px-3 py-2 border border-gray-300 placeholder-gray-500 focus:ring-1 focus:outline-none focus:ring-green-500 focus:border-green-500 focus:z-10 sm:text-sm"/> 
                             <button type="submit" className="w-2/12 group relative flex justify-center py-2 px-10 text-sm font-medium rounded-md focus:border-gray-800 text-white bg-primary hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
                                 Envoyer
@@ -89,6 +110,7 @@ export default function Footer() {
                 <p className="text-sm text-center md:text-left">Créatif et attentif aux dernières tendances, je façonne vos supports de communication papier en créant un graphisme innovant tout en vous accompagnant dans votre projet</p>          
                 <P className="text-sm text-center md:text-left">© Moha Raouafi – Tous droits réservés | <a href='https://docs.google.com/document/d/1MkduyztnskBDZnGJ67kF2YWlFbqxt-bKJJP7fEotkk8/edit?usp=sharing'>Mentions légales</a> | <a href='https://docs.google.com/document/d/1RVk2i3QdPIgwNH9K-nT-lm-jans-lr0eguRDBCPzSes/edit?usp=sharing'>CGV</a> </P>
             </div>
+            <Toaster/>
         </footer> 
     )
 }
@@ -102,4 +124,10 @@ const Img = styled.img`
 const P = styled.p`
     font-weight: 800
    
+`;
+
+const Loader = styled(Spinner)`
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
 `;

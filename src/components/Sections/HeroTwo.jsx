@@ -63,7 +63,7 @@ export default function HeroTwo() {
                         showFullText={showFullText} 
                         style={{displace: showFullText ? 'none' : ''}}
                     >
-                        <p>
+                        <p className="text-gray-500 text-lg font-light my-4">
                             Graphiste Freelance basé dans les Alpes-Maritimes, je mets à disposition mon savoir-faire et ma créativité.
                             <br/>
                             <br/>

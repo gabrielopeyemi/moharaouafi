@@ -1,4 +1,5 @@
 import React from 'react';
+import emailjs from 'emailjs-com';
 import IMG from './../../assets/Image/Contact/plane.png'
 import SectionHeader from './../SectionHeader';
 import Address from './../Address';
@@ -9,6 +10,17 @@ export default function HeroTen() {
         one: 'Vous avez un projet en tête?',
         two: `N'hésitez pas à me faire part de votre projet pour qu'ensemble nous lui donnions vie !`
     }
+    function sendEmail(e) {
+        e.preventDefault();
+    
+        emailjs.sendForm('service_ydkhg5c', 'template_jykovgr', e.target, 'user_0PSkAfEGIfVOCK5zvxcMY')
+          .then((result) => {
+              console.log(result.text);
+          }, (error) => {
+              console.log(error.text);
+          });
+      }
+    
   return (
     <>
         <div id='contact' className="relative flex flex-wrap justify-center mx-6">
@@ -21,7 +33,7 @@ export default function HeroTen() {
                                 <Address />
                             </div>
                         </div>
-                        <div className='col-md-6 col-lg-4'>
+                        <form className='col-md-6 col-lg-4' onSubmit={sendEmail}>
                             <h2 style={{fontWeight: 700}} className="text-gray-600 text-2xl font-light text-center mb-10">Contactez-moi</h2> 
                             <div>
                                 <div className="rounded-lg space-y-4 lg:w-contact-form">
@@ -40,12 +52,10 @@ export default function HeroTen() {
                                     </div>
                                 </div> 
                                 <div className="mt-4">
-                                    <button type="submit" className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-primary hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
-                                        Envoyer
-                                    </button>
+                                    <input type="submit" placeholder="Envoyer" className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-primary hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500" />
                                 </div>
                             </div>
-                        </div>
+                        </form>
                         <div className='col-md-6 col-lg-4'  style={{alignSelf: 'center'}}>
                             <div className="hidden lg:block lg:ml-20 mt-10 lg:mt-0">
                                 <img src={IMG} alt="submit" className="w-40 lg:w-60"/>

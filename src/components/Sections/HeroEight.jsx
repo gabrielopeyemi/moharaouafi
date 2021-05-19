@@ -17,7 +17,8 @@ export default function HeroEight() {
             id: 1,
             name: 'Karine',
             project: 'DESIGN ARCHITECTURALE',
-            content: `"Moha est un professionnel avec un grand P : réactivité, disponibilité, écoute, patience, pédagogie, tarifs attractifs. Je l'ai sollicité pour la création de logo, site internet, dépliants, papier à en-tête, cartes de visite... et il a respecté en touts points mes attentes en m'apportant au passage des informations très utiles pour le développement de ma communication. Je le recommande vivement. Merci Moha !"`,
+            content: `"Moha est un professionnel avec un grand P : réactivité, disponibilité, écoute, patience, pédagogie, tarifs attractifs. Je l'ai sollicité pour la création de logo, site internet, dépliants, papier à en-tête, cartes de visite... et il a respecté en tous points mes attentes en m'apportant au passage des informations très utiles pour le développement de la communication souhaitée. Je le recommande vivement. Merci Moha !"
+            `,
             img: One,
         },
         {

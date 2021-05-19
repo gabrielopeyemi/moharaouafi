@@ -26,13 +26,13 @@ export default function HeroSeven() {
             id: 3,
             img: Three,
             title: 'Création',
-            content: 'Place aux différentes propositions selon vos requêtes ! Différents visuels vous seront proposés. A force d’échanges, la piste sélectionnée est finalisée selon vos retours, afin de correspondre parfaitement à vos attentes.',
+            content: 'Place aux différentes propositions selon vos requêtes ! Différents visuels vous seront proposés. Grâce à des échanges, la piste sélectionnée est finalisée selon vos retours, afin de correspondre parfaitement à vos attentes.',
         },
         {
             id: 4,
             img: Four,
             title: 'Finalisation',
-            content: 'L’étape ultime ! la concrétisation du projet ! Une fois la création validée, je vous fournis les fichiers dans un panel de formats adaptés à vos besoins.'
+            content: 'L’étape ultime ! La concrétisation du projet ! Une fois la création validée, je vous fournis les fichiers dans un panel de formats adaptés à vos besoins.'
         }
     ]
   return (

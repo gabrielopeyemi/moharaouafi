@@ -16,14 +16,14 @@ export default function HeroNine() {
                     Avez-vous pensé à faire un diagnostic gratuit de vos outils de communication?
                 </div> 
                 <div className="my-6 mx-6 font-light uppercase max-w-2xl">
-                    Je vous propose un RDV gratuit de 1 heures pendant lequel nous analysons vos supports, votre image et vos objectifs.
+                    Je vous propose un RDV gratuit de 1 heure pendant lequel nous analysons vos supports, votre image et vos objectifs.
                 </div> 
                 <A
                     target="_blank" 
                     href="https://calendly.com/moharaouafi/diagnostic" 
                     className="flex items-center lg:w-96 mb-20 hover:bg-opacity-90 uppercase justify-center my-10 py-3 px-4 text-sm font-medium rounded-md"
                 >
-                    Réserver un appel gratuit
+                    RÉSERVER GRATUITEMENT UN APPEL
                 </A>
             </div>
         </section>

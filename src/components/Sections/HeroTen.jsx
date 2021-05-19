@@ -11,7 +11,7 @@ import Address from './../Address';
 export default function HeroTen() {
     const [isLoading, setIsLoading] = useState(false)
     const header = {
-        one: 'Vous avez un projet en tête?',
+        one: 'UNE QUESTION, UN PROJET ?',
         two: `N'hésitez pas à me faire part de votre projet pour qu'ensemble nous lui donnions vie !`
     }
     function sendEmail(e) {
@@ -45,7 +45,7 @@ export default function HeroTen() {
                             </div>
                         </div>
                         <form className='col-md-6 col-lg-4' onSubmit={sendEmail}>
-                            <h2 style={{fontWeight: 700}} className="text-gray-600 text-2xl font-light text-center mb-10">Contactez-moi</h2> 
+                            <h2 style={{fontWeight: 700}} className="text-gray-600 text-2xl font-light text-center mb-10">CONTACTEZ-MOI</h2> 
                             <div>
                                 <div className="rounded-lg space-y-4 lg:w-contact-form">
                                     <div>

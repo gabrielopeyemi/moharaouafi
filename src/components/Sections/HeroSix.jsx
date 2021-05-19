@@ -252,6 +252,9 @@ const CardItem = styled.div`
     @media only screen and (max-width: 524px){
         width: 100%;
     }
+    &:hover{
+      opacity: 0.5
+    }
 `;
 
 const CardInner = styled.div`

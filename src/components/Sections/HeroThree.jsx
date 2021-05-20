@@ -40,15 +40,6 @@ export default function HeroThree() {
               <CardWarp>
                 <CardItem className="lg:hover:shadow-md">
                     <div style={{justifyContent: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-                      <Img style={{width: '80%'}} fluid={Data[4].frontmatter.image.childImageSharp.fluid} />
-                        <div className="card-body">
-                            <H3 className="card-title">{Data[4].frontmatter.Name}</H3>
-                            <p className="card-text text-center" style={{color: '#4b5563'}}>{Data[4].frontmatter.about}</p>
-                          </div>
-                    </div>
-                </CardItem> 
-                <CardItem className="lg:hover:shadow-md">
-                    <div style={{justifyContent: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                       <Img style={{width: '80%'}} fluid={Data[5].frontmatter.image.childImageSharp.fluid} />
                         <div className="card-body">
                             <H3 className="card-title">{Data[5].frontmatter.Name}</H3>
@@ -62,6 +53,15 @@ export default function HeroThree() {
                         <div className="card-body">
                             <H3 className="card-title">{Data[0].frontmatter.Name}</H3>
                             <p className="card-text text-center" style={{color: '#4b5563'}}>{Data[0].frontmatter.about}</p>
+                          </div>
+                    </div>
+                </CardItem> 
+                <CardItem className="lg:hover:shadow-md">
+                    <div style={{justifyContent: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+                      <Img style={{width: '80%'}} fluid={Data[4].frontmatter.image.childImageSharp.fluid} />
+                        <div className="card-body">
+                            <H3 className="card-title">{Data[4].frontmatter.Name}</H3>
+                            <p className="card-text text-center" style={{color: '#4b5563'}}>{Data[4].frontmatter.about}</p>
                           </div>
                     </div>
                 </CardItem> 

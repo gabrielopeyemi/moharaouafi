@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
-import { useStaticQuery, graphql } from 'gatsby'
+import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
-import { FaTimes } from 'react-icons/fa'
-import Modal from 'react-bootstrap/Modal'
+import { FaTimes } from 'react-icons/fa';
+import Modal from 'react-bootstrap/Modal';
 
 export default function HeroSix() {
 

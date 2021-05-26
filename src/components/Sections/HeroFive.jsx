@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
+import Img from 'gatsby-image';
 import Carousel from 'react-elastic-carousel';
 import styled from 'styled-components';
+import { useStaticQuery, graphql } from 'gatsby';
 
 //import logo images
 import CashArcadeOne from './../../assets/Image/LogoClients/CashArcade/CashArcadeOne.png';
@@ -28,6 +30,40 @@ import envibusOne from "./../../assets/Image/LogoClients/envibus/envibusOne.png"
 import envibusTwo from "./../../assets/Image/LogoClients/envibus/envibusTwo.png";
 
 export default function HeroFive() {
+    const Data = useStaticQuery(graphql`
+        query clientLogo {
+            allMarkdownRemark(filter: {frontmatter: {group: {eq: "ClientLogo"}}}) {
+                nodes {
+                    frontmatter {
+                        Name
+                        group
+                        date(fromNow: false)
+                        title
+                        stack
+                        slug
+                        imageBlue {
+                            childImageSharp {
+                                fluid (maxWidth: 2048, quality: 90){
+                                    ...GatsbyImageSharpFluid
+                                }
+                            }
+                        }
+                        image {
+                            childImageSharp {
+                                fluid (maxWidth: 2048, quality: 90) {
+                                    ...GatsbyImageSharpFluid
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        `);
+    const Clients = Data.allMarkdownRemark.nodes;
+    console.log({Clients});
+    const [imageStatus, setImageStatus] = useState(true)
+
     const [imageOne, setImageOne] = useState(CashArcadeOne)
     const [imageDEBS, setImageDEBS] = useState(DEBSOne)
     const [imagefruiteo, setImagfruiteo] = useState(fruiteoOne)
@@ -63,21 +99,25 @@ export default function HeroFive() {
                 itemPadding={[10, 50]}
                 breakPoints={breakPoints}
               >
-                <Img maxWidth="10%" className="" onFocus={ () => void 0 } onMouseOver={()=> setImageOne(CashArcadeTwo)} onMouseLeave={()=> setImageOne(CashArcadeOne)} src={imageOne} alt={imageOne}/>
-                <Img maxWidth="10%" className="" onFocus={ () => void 0 } onMouseOver={()=> setImageDEBS(DEBSTwo)} onMouseLeave={()=> setImageDEBS(DEBSOne)} src={imageDEBS} alt={imageDEBS}/>
-                <Img maxWidth="10%" className="" onFocus={ () => void 0 } onMouseOver={()=> setImagfruiteo(fruiteoTwo)} onMouseLeave={()=> setImagfruiteo(fruiteoOne)} src={imagefruiteo} alt={imagefruiteo}/>
-                <Img maxWidth="10%" className="" onFocus={ () => void 0 } onMouseOver={()=> setImageSauceSissi(SauceSissiTwo)} onMouseLeave={()=> setImageSauceSissi(SauceSissiOne)} src={imageSauceSissi} alt={imageSauceSissi}/>
-                <Img maxWidth="10%" className="" onFocus={ () => void 0 } onMouseOver={()=> setImageVictoriaInfinity(VictoriaInfinityTwo)} onMouseLeave={()=> setImageVictoriaInfinity(VictoriaInfinityOne)} src={imageVictoriaInfinity} alt={imageVictoriaInfinity}/>
-                <Img maxWidth="10%" className="" onFocus={ () => void 0 } onMouseOver={()=> setImageLaxess(LaxessTwo)} onMouseLeave={()=> setImageLaxess(LaxessOne)} src={imageLaxess} alt={imageLaxess}/>
-                <Img maxWidth="10%" className="" onFocus={ () => void 0 } onMouseOver={()=> setImagecfdt(cfdtTwo)} onMouseLeave={()=> setImagecfdt(cfdtOne)} src={imagecfdt} alt={imagecfdt}/>
-                <Img maxWidth="10%" className="" onFocus={ () => void 0 } onMouseOver={()=> setImageenvibus(envibusTwo)} onMouseLeave={()=> setImageenvibus(envibusOne)} src={imageenvibus} alt={imageenvibus}/>
-              </Carousel> 
+                 {Clients.map((client) => (
+                    <>
+                        <Img  
+                            style={{width: '100%', borderRadius: '10px'}} 
+                            onFocus={ () => void 0 } 
+                            onMouseOver={() => alert('HAHA')} 
+                            onClick={()=> alert('hello')}
+                            onMouseLeave={()=> setImageStatus(true)} 
+                            fluid={imageStatus ? client.frontmatter.image.childImageSharp.fluid : client.frontmatter.imageBlue.childImageSharp.fluid} 
+                        />
+                    </>
+                ))}
+            </Carousel> 
           </div>
       </div>
   </section>
   );
 };
 
-const Img = styled.img`
-    width: 100px;
-`;
+// const Image = styled(Img)`
+//     width: 100px;
+// `;

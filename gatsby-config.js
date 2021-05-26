@@ -38,6 +38,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `ClientLogo`,
+        path: `${__dirname}/src/assets/Image/LogoClients`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `ProfileImages`,
         path: `${__dirname}/src/assets/Image/Profil`,
       },

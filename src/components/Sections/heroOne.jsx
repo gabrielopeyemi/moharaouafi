@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import INavbar from '../Navigation';
+import Img from 'gatsby-image'
 import { graphql, useStaticQuery } from 'gatsby';
 import IMAGE from './../../assets/Image/Profil/Image-welcomes.png';
 
@@ -25,8 +26,8 @@ export default function HeroOne() {
             <div className="flex justify-center">
                 <div className="flex flex-wrap items-center container my-10 mx-6 pt-4">
                     <div className="w-full lg:w-6/12 flex justify-start">
-                        <img src={IMAGE} alt="Illustration Mac" class="relative right-50 lg:right-100 w-full lg:w-bg-mac select-none lg:pr-4"/>
-                        {/* <Img fluid={data.file.childImageSharp.fluid} style={{left: '-30px'}}  className="relative right-50 lg:right-100 w-full lg:w-bg-mac select-none lg:pr-4"/> */}
+                        {/* <img src={IMAGE} alt="Illustration Mac" class="relative right-50 lg:right-100 w-full lg:w-bg-mac select-none lg:pr-4"/> */}
+                        <Img fluid={data.file.childImageSharp.fluid} style={{left: '-30px'}}  className="relative right-50 lg:right-100 w-full lg:w-bg-mac select-none lg:pr-4"/>
                     </div> 
                     <div class="w-full lg:w-6/12 flex flex-col items-center text-center py-10">
                         <H2 className="my-2 leading-10">VOUS CHERCHEZ À VOUS <br/> DÉMARQUER DE VOS CONCURRENTS{' '}?</H2> 
@@ -89,8 +90,4 @@ const Button = styled.a`
         color: #6cbc8f !important;
         background-color: #fff !important;
     }
-`;
-
-const Img = styled.img`
-
 `;

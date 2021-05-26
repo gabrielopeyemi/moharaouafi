@@ -105,6 +105,7 @@ const CardWarp = styled.div`
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    justify-content: center;
 `;
 
 const CardItem = styled.div`
